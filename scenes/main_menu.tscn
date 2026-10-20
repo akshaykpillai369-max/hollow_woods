@@ -1,0 +1,131 @@
+[gd_scene format=3 uid="uid://daaxi53p31kto"]
+
+[ext_resource type="Script" uid="uid://dmp6ujccghqci" path="res://scripts/main_menu.gd" id="1_wu84c"]
+[ext_resource type="Texture2D" uid="uid://iyu00p3l7rnw" path="res://assets/background.png" id="2_8ln24"]
+[ext_resource type="FontFile" uid="uid://dvrkigp4rd1xo" path="res://assets/fonts/PressStart2P-Regular.ttf" id="3_rtw2f"]
+[ext_resource type="AudioStream" uid="uid://dks2jonxpuuoa" path="res://assets/soundeffects/main_menu_music.mp3" id="4_wu84c"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jix8l"]
+bg_color = Color(0.09411765, 0.09411765, 0.09411765, 0.8627451)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_detail = 10
+
+[node name="MainMenu" type="Control" unique_id=1143874184]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_wu84c")
+
+[node name="Background2" type="TextureRect" parent="." unique_id=58758512]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 379.0
+offset_right = -434.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_8ln24")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="Title" type="Label" parent="." unique_id=375436525]
+layout_mode = 0
+offset_left = 570.0
+offset_top = 158.0
+offset_right = 1338.0
+offset_bottom = 222.0
+theme_override_colors/font_color = Color(0.8980392, 0.8784314, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0.7033931, 0.43270096, 0)
+theme_override_colors/font_outline_color = Color(0.99150366, 0.97174007, 0.95751363, 1)
+theme_override_fonts/font = ExtResource("3_rtw2f")
+theme_override_font_sizes/font_size = 64
+text = "HOLLOW WOODS"
+
+[node name="PlayButton" type="Button" parent="." unique_id=634956321]
+layout_mode = 0
+offset_left = 857.0
+offset_top = 284.0
+offset_right = 985.0
+offset_bottom = 334.0
+theme_override_colors/font_outline_color = Color(0.44814438, 0.416661, 0.08094307, 1)
+theme_override_fonts/font = ExtResource("3_rtw2f")
+theme_override_font_sizes/font_size = 30
+text = "PLAY"
+
+[node name="MenuMusic" type="AudioStreamPlayer2D" parent="." unique_id=1592816891]
+stream = ExtResource("4_wu84c")
+autoplay = true
+
+[node name="SettingsButton" type="Button" parent="." unique_id=1036801133]
+layout_mode = 0
+offset_left = 802.0
+offset_top = 353.0
+offset_right = 1050.0
+offset_bottom = 414.0
+theme_override_fonts/font = ExtResource("3_rtw2f")
+theme_override_font_sizes/font_size = 30
+text = "SETTINGS"
+
+[node name="SettingsPanel" type="Panel" parent="." unique_id=2085215172]
+visible = false
+layout_mode = 0
+offset_left = 524.0
+offset_top = 130.0
+offset_right = 1311.0
+offset_bottom = 577.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_jix8l")
+
+[node name="SettingsLabel" type="Label" parent="SettingsPanel" unique_id=1951316369]
+layout_mode = 0
+offset_left = 276.0
+offset_top = 35.0
+offset_right = 516.0
+offset_bottom = 78.0
+theme_override_fonts/font = ExtResource("3_rtw2f")
+theme_override_font_sizes/font_size = 30
+text = "SETTINGS"
+
+[node name="MainMenuMusicButton" type="CheckButton" parent="SettingsPanel" unique_id=275186490]
+layout_mode = 0
+offset_left = 150.0
+offset_top = 135.0
+offset_right = 648.0
+offset_bottom = 173.0
+theme_override_fonts/font = ExtResource("3_rtw2f")
+theme_override_font_sizes/font_size = 30
+button_pressed = true
+text = "MAIN MENU MUSIC"
+
+[node name="LevelMusicButton" type="CheckButton" parent="SettingsPanel" unique_id=101262470]
+layout_mode = 0
+offset_left = 158.0
+offset_top = 191.0
+offset_right = 605.0
+offset_bottom = 229.0
+theme_override_fonts/font = ExtResource("3_rtw2f")
+theme_override_font_sizes/font_size = 30
+button_pressed = true
+text = "LEVEL MUSIC"
+
+[node name="BackButton" type="Button" parent="SettingsPanel" unique_id=1957324596]
+layout_mode = 0
+offset_left = 348.0
+offset_top = 362.0
+offset_right = 476.0
+offset_bottom = 400.0
+theme_override_fonts/font = ExtResource("3_rtw2f")
+theme_override_font_sizes/font_size = 30
+text = "BACK"
+
+[connection signal="pressed" from="PlayButton" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="SettingsButton" to="." method="_on_settings_button_pressed"]
+[connection signal="toggled" from="SettingsPanel/MainMenuMusicButton" to="." method="_on_main_menu_music_button_toggled"]
+[connection signal="toggled" from="SettingsPanel/LevelMusicButton" to="." method="_on_level_music_button_toggled"]
+[connection signal="pressed" from="SettingsPanel/BackButton" to="." method="_on_back_button_pressed"]
