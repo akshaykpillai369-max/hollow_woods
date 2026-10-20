@@ -9,6 +9,9 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_n7nmp"]
 size = Vector2(108, 716)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_unhky"]
+size = Vector2(136, 218)
+
 [node name="Main" type="Node2D" unique_id=2089548068]
 script = ExtResource("1_tbgi4")
 
@@ -40,8 +43,7 @@ position = Vector2(713.9375, 444.5)
 position = Vector2(1241, 188)
 
 [node name="Enemy" parent="." unique_id=179718117 instance=ExtResource("3_sugp2")]
-position = Vector2(-730, 265)
-speed = null
+position = Vector2(-656, 281)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=586361335]
 
@@ -58,5 +60,13 @@ shape = SubResource("RectangleShape2D_n7nmp")
 [node name="LevelMusic" type="AudioStreamPlayer2D" parent="." unique_id=1680915799]
 stream = ExtResource("4_jyhfs")
 volume_db = 5.821
+
+[node name="MonsterTrigger" type="Area2D" parent="." unique_id=1895320217]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MonsterTrigger" unique_id=198374186]
+position = Vector2(765, 535)
+shape = SubResource("RectangleShape2D_unhky")
+
+[connection signal="body_entered" from="MonsterTrigger" to="." method="_on_monster_trigger_body_entered"]
 
 [editable path="Player"]

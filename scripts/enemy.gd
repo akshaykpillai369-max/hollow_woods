@@ -6,8 +6,10 @@ var player: CharacterBody2D
 var caught_player: bool = false
 
 func _ready() -> void:
+	hide()
 	animated_sprite.play("idle")
 	player = get_parent().get_node_or_null("Player") as CharacterBody2D
+	$CollisionShape2D.set_deferred("disabled", true)
 func _physics_process(_delta: float) -> void:
 	if not is_instance_valid(player) or caught_player:
 		return
