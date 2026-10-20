@@ -88,19 +88,19 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_n7nmp"]
-size = Vector2(108, 147)
+size = Vector2(86.125, 135)
 
 [node name="Player" type="CharacterBody2D" unique_id=1567295188]
 script = ExtResource("1_qhqgy")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1993292878]
-position = Vector2(489, 262.5)
-scale = Vector2(5.625, 6.09375)
+position = Vector2(407.62503, 421.375)
+scale = Vector2(5.460937, 5.601563)
 sprite_frames = SubResource("SpriteFrames_n7nmp")
 animation = &"walk"
 frame = 2
 frame_progress = 0.17896004
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1789058853]
-position = Vector2(501, 288.5)
+position = Vector2(414.9375, 444.5)
 shape = SubResource("RectangleShape2D_n7nmp")
