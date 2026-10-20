@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://bd42rxwu1rwm7" path="res://scripts/player.gd" id="1_qhqgy"]
 [ext_resource type="Texture2D" uid="uid://d3fgdr614hvyl" path="res://assets/player/protagonist_idle_right.png" id="2_dqkch"]
 [ext_resource type="Texture2D" uid="uid://bxotdjsioegte" path="res://assets/player/protagonist_run_right.png" id="3_qlg0r"]
+[ext_resource type="AudioStream" uid="uid://dtod7sbyfgwjd" path="res://assets/soundeffects/vanish.mp3" id="4_dqkch"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_tuyoq"]
 atlas = ExtResource("2_dqkch")
@@ -106,3 +107,7 @@ shape = SubResource("RectangleShape2D_n7nmp")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=180238180]
 position_smoothing_enabled = true
+
+[node name="DeathSound" type="AudioStreamPlayer2D" parent="." unique_id=785500693]
+stream = ExtResource("4_dqkch")
+volume_db = 12.806

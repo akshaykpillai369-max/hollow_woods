@@ -17,3 +17,8 @@ func _on_monster_trigger_body_entered(body: Node2D) -> void:
 		$Enemy/CollisionShape2D.set_deferred("disabled", false)
 		$Enemy.set_physics_process(true)
 		$MonsterTrigger.queue_free()
+
+
+func _on_spike_effect_trigger_body_entered(body: Node2D) -> void:
+	$SpikeEffectTrigger.set_deferred("monitoring", false)
+	$SpikeEffectTrigger.set_deferred("monitorable", false)

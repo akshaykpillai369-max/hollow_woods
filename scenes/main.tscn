@@ -5,6 +5,8 @@
 [ext_resource type="PackedScene" uid="uid://8j7hsrf16f0" path="res://scenes/player.tscn" id="2_sugp2"]
 [ext_resource type="PackedScene" uid="uid://c6iifnap50ulp" path="res://scenes/enemy.tscn" id="3_sugp2"]
 [ext_resource type="AudioStream" uid="uid://bdq4gss2c6udk" path="res://assets/soundeffects/level_music.mp3" id="4_jyhfs"]
+[ext_resource type="PackedScene" uid="uid://b1lcd3casttwu" path="res://scenes/spike.tscn" id="6_tefeu"]
+[ext_resource type="PackedScene" uid="uid://gpqdputycit2" path="res://scenes/death_screen.tscn" id="7_o6xl0"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_n7nmp"]
 size = Vector2(108, 716)
@@ -12,20 +14,23 @@ size = Vector2(108, 716)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_unhky"]
 size = Vector2(136, 218)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7a7y0"]
+size = Vector2(145.25, 236.5)
+
 [node name="Main" type="Node2D" unique_id=2089548068]
 script = ExtResource("1_tbgi4")
 
 [node name="Ground" parent="." unique_id=1932350716 instance=ExtResource("1_0wfyh")]
-position = Vector2(1, -4)
+position = Vector2(1, 13)
 
 [node name="Ground2" parent="." unique_id=117637961 instance=ExtResource("1_0wfyh")]
-position = Vector2(1153, -3)
+position = Vector2(1153, 13)
 
 [node name="Ground3" parent="." unique_id=5861961 instance=ExtResource("1_0wfyh")]
-position = Vector2(2304, -1)
+position = Vector2(2304, 13)
 
 [node name="Ground4" parent="." unique_id=818509051 instance=ExtResource("1_0wfyh")]
-position = Vector2(-1151, -5)
+position = Vector2(-1151, 13)
 
 [node name="Ground5" parent="." unique_id=723496604 instance=ExtResource("1_0wfyh")]
 position = Vector2(3457, 0)
@@ -34,16 +39,16 @@ position = Vector2(3457, 0)
 position = Vector2(-282, 121)
 
 [node name="AnimatedSprite2D" parent="Player" index="0" unique_id=1993292878]
-position = Vector2(705.62476, 421.375)
+position = Vector2(705.62476, 457.375)
 
 [node name="CollisionShape2D" parent="Player" index="1" unique_id=1789058853]
-position = Vector2(713.9375, 444.5)
+position = Vector2(713.9375, 476.5)
 
 [node name="Camera2D" parent="Player" index="2" unique_id=180238180]
-position = Vector2(1241, 188)
+position = Vector2(1212, 219)
 
 [node name="Enemy" parent="." unique_id=179718117 instance=ExtResource("3_sugp2")]
-position = Vector2(-656, 281)
+position = Vector2(-528, 296)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=586361335]
 
@@ -64,9 +69,27 @@ volume_db = 5.821
 [node name="MonsterTrigger" type="Area2D" parent="." unique_id=1895320217]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="MonsterTrigger" unique_id=198374186]
-position = Vector2(765, 535)
+position = Vector2(764, 553)
 shape = SubResource("RectangleShape2D_unhky")
 
+[node name="SpikeEffectTrigger" type="Area2D" parent="." unique_id=956744818]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SpikeEffectTrigger" unique_id=1365288505]
+position = Vector2(995, 544)
+shape = SubResource("RectangleShape2D_7a7y0")
+
+[node name="Spike" parent="." unique_id=1951884892 instance=ExtResource("6_tefeu")]
+position = Vector2(684, 661)
+
+[node name="UI" type="CanvasLayer" parent="." unique_id=955424061]
+
+[node name="DeathScreen" parent="UI" unique_id=621254565 instance=ExtResource("7_o6xl0")]
+offset_left = 445.0
+offset_top = -3.0
+offset_right = 485.0
+offset_bottom = 37.0
+
 [connection signal="body_entered" from="MonsterTrigger" to="." method="_on_monster_trigger_body_entered"]
+[connection signal="body_entered" from="SpikeEffectTrigger" to="." method="_on_spike_effect_trigger_body_entered"]
 
 [editable path="Player"]

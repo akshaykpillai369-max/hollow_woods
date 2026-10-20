@@ -1,14 +1,16 @@
 extends CharacterBody2D
 
-@export var speed: float = 90.0
+@export var speed: float = 163.0
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
 var player: CharacterBody2D
 var caught_player: bool = false
+signal player_caught
 
 func _ready() -> void:
 	hide()
 	animated_sprite.play("idle")
 	player = get_parent().get_node_or_null("Player") as CharacterBody2D
+	set_physics_process(false)
 	$CollisionShape2D.set_deferred("disabled", true)
 func _physics_process(_delta: float) -> void:
 	if not is_instance_valid(player) or caught_player:
@@ -29,6 +31,8 @@ func trigger_kill() -> void:
 	set_physics_process(false)
 	animated_sprite.play("kill")
 	player.set_physics_process(false)
+	if is_instance_valid(player):
+		$KillSound.play()
 	var player_collision: CollisionShape2D = \
 		player.get_node_or_null("CollisionShape2D")
 	if is_instance_valid(player_collision):
@@ -56,4 +60,7 @@ func trigger_kill() -> void:
 	death_tween.tween_callback(func():
 		if is_instance_valid(player):
 			player.hide()
+			$VanishSound.play()
+			get_tree().current_scene.get_node("UI/DeathScreen").show()
+			
 	)
