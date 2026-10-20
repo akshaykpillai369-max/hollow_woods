@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://05m0t040s28s"]
+
+[ext_resource type="Texture2D" uid="uid://d38pfjgoiscyi" path="res://assets/ground/dimensions/forest/forest_tiles.png" id="1_3gol3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n7nmp"]
+size = Vector2(299, 31)
+
+[node name="BottomGround" type="Area2D" unique_id=140233946]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1757099963]
+position = Vector2(721.5, 208.5)
+shape = SubResource("RectangleShape2D_n7nmp")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1142606133]
+position = Vector2(719.25006, 237.5)
+scale = Vector2(3.170886, 4.318182)
+texture = ExtResource("1_3gol3")
+region_enabled = true
+region_rect = Rect2(48.526627, 95.829636, 94.6956, 21.323036)
