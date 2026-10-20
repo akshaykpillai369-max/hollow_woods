@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://c50whvid6nv6n"]
+
+[ext_resource type="Texture2D" uid="uid://wmmadtep0nv8" path="res://assets/ground/dimensions/forest/rocks.png" id="1_1di36"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n7nmp"]
+size = Vector2(141.75, 39)
+
+[node name="Rock" type="Area2D" unique_id=563170387]
+
+[node name="Rock" type="Sprite2D" parent="." unique_id=759094079]
+position = Vector2(755, 313)
+scale = Vector2(1.8124998, 4.3437505)
+texture = ExtResource("1_1di36")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=145073613]
+position = Vector2(759.125, 329.5)
+shape = SubResource("RectangleShape2D_n7nmp")
+disabled = true
