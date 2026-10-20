@@ -1,13 +1,16 @@
 [gd_scene format=3 uid="uid://dcm67pxvmj41k"]
 
 [ext_resource type="PackedScene" uid="uid://dym8scckddkqb" path="res://scenes/ground.tscn" id="1_0wfyh"]
+[ext_resource type="Script" uid="uid://bn7ngl5tmwu5" path="res://scenes/main.gd" id="1_tbgi4"]
 [ext_resource type="PackedScene" uid="uid://8j7hsrf16f0" path="res://scenes/player.tscn" id="2_sugp2"]
 [ext_resource type="PackedScene" uid="uid://c6iifnap50ulp" path="res://scenes/enemy.tscn" id="3_sugp2"]
+[ext_resource type="AudioStream" uid="uid://bdq4gss2c6udk" path="res://assets/soundeffects/level_music.mp3" id="4_jyhfs"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_n7nmp"]
 size = Vector2(108, 716)
 
 [node name="Main" type="Node2D" unique_id=2089548068]
+script = ExtResource("1_tbgi4")
 
 [node name="Ground" parent="." unique_id=1932350716 instance=ExtResource("1_0wfyh")]
 position = Vector2(1, -4)
@@ -51,5 +54,9 @@ shape = SubResource("RectangleShape2D_n7nmp")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2" unique_id=475384587]
 position = Vector2(3507, 379)
 shape = SubResource("RectangleShape2D_n7nmp")
+
+[node name="LevelMusic" type="AudioStreamPlayer2D" parent="." unique_id=1680915799]
+stream = ExtResource("4_jyhfs")
+volume_db = 5.821
 
 [editable path="Player"]

@@ -31,7 +31,3 @@ func _on_back_button_pressed() -> void:
 func _on_main_menu_music_button_toggled(toggled_on: bool) -> void:
 	main_menu_music_enabled = toggled_on
 	$MenuMusic.playing = toggled_on
-#
-#
-#func _on_level_music_button_toggled(toggled_on: bool) -> void:
-	#Settings.level_music_enabled = toggled_on

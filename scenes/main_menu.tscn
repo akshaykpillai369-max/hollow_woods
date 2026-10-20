@@ -103,17 +103,6 @@ theme_override_font_sizes/font_size = 30
 button_pressed = true
 text = "MAIN MENU MUSIC"
 
-[node name="LevelMusicButton" type="CheckButton" parent="SettingsPanel" unique_id=101262470]
-layout_mode = 0
-offset_left = 158.0
-offset_top = 191.0
-offset_right = 605.0
-offset_bottom = 229.0
-theme_override_fonts/font = ExtResource("3_rtw2f")
-theme_override_font_sizes/font_size = 30
-button_pressed = true
-text = "LEVEL MUSIC"
-
 [node name="BackButton" type="Button" parent="SettingsPanel" unique_id=1957324596]
 layout_mode = 0
 offset_left = 348.0
@@ -127,5 +116,4 @@ text = "BACK"
 [connection signal="pressed" from="PlayButton" to="." method="_on_play_button_pressed"]
 [connection signal="pressed" from="SettingsButton" to="." method="_on_settings_button_pressed"]
 [connection signal="toggled" from="SettingsPanel/MainMenuMusicButton" to="." method="_on_main_menu_music_button_toggled"]
-[connection signal="toggled" from="SettingsPanel/LevelMusicButton" to="." method="_on_level_music_button_toggled"]
 [connection signal="pressed" from="SettingsPanel/BackButton" to="." method="_on_back_button_pressed"]
