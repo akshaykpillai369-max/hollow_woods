@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://dym8scckddkqb"]
 
 [ext_resource type="Texture2D" uid="uid://dq5i0ooepvqer" path="res://assets/ground.png" id="1_pybca"]
+[ext_resource type="PackedScene" uid="uid://05m0t040s28s" path="res://scenes/bottom_ground.tscn" id="2_mi8v4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_n7nmp"]
 size = Vector2(1175, 67)
@@ -8,8 +9,8 @@ size = Vector2(1175, 67)
 [node name="Ground" type="Node2D" unique_id=1932350716]
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=500663171]
-position = Vector2(575.31244, 237.50002)
-scale = Vector2(2.2526853, 2.4527776)
+position = Vector2(575.31244, 66.49997)
+scale = Vector2(2.2526853, 3.2472224)
 texture = ExtResource("1_pybca")
 region_rect = Rect2(63.222237, 0, 64.711105, 48.284004)
 
@@ -18,3 +19,7 @@ region_rect = Rect2(63.222237, 0, 64.711105, 48.284004)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=829600289]
 position = Vector2(582.5, 685)
 shape = SubResource("RectangleShape2D_n7nmp")
+
+[node name="BottomGround" parent="." unique_id=140233946 instance=ExtResource("2_mi8v4")]
+position = Vector2(-2973.0002, -301)
+scale = Vector2(5, 5)
