@@ -90,17 +90,19 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_n7nmp"]
 size = Vector2(86.125, 135)
 
-[node name="Player" type="CharacterBody2D" unique_id=1567295188]
+[node name="Player" type="CharacterBody2D" unique_id=1567295188 groups=["player"]]
 script = ExtResource("1_qhqgy")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1993292878]
 position = Vector2(407.62503, 421.375)
 scale = Vector2(5.460937, 5.601563)
 sprite_frames = SubResource("SpriteFrames_n7nmp")
-animation = &"walk"
-frame = 2
-frame_progress = 0.17896004
+animation = &"idle"
+frame_progress = 0.57880557
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1789058853]
 position = Vector2(414.9375, 444.5)
 shape = SubResource("RectangleShape2D_n7nmp")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=180238180]
+position_smoothing_enabled = true
