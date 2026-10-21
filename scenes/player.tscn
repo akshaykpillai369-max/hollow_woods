@@ -6,6 +6,7 @@
 [ext_resource type="AudioStream" uid="uid://dtod7sbyfgwjd" path="res://assets/soundeffects/vanish.mp3" id="4_dqkch"]
 [ext_resource type="AudioStream" uid="uid://gic8toadrdys" path="res://assets/soundeffects/walk.mp3" id="5_qlg0r"]
 [ext_resource type="AudioStream" uid="uid://dpan27iotqw2e" path="res://assets/soundeffects/jump.mp3" id="6_tuyoq"]
+[ext_resource type="AudioStream" uid="uid://dd6rkanbqrasu" path="res://assets/soundeffects/jump_land.mp3" id="7_fjrip"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_tuyoq"]
 atlas = ExtResource("2_dqkch")
@@ -120,3 +121,6 @@ autoplay = true
 
 [node name="JumpSound" type="AudioStreamPlayer" parent="." unique_id=2120241417]
 stream = ExtResource("6_tuyoq")
+
+[node name="LandSound" type="AudioStreamPlayer" parent="." unique_id=379095763]
+stream = ExtResource("7_fjrip")

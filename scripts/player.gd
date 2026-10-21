@@ -7,6 +7,8 @@ const JUMP_VELOCITY = -800.0
 @onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
 @onready var walk_sound: AudioStreamPlayer = $WalkSound
 @onready var jump_sound: AudioStreamPlayer = $JumpSound
+@onready var land_sound: AudioStreamPlayer = $LandSound
+var was_on_floor: bool = true
 
 func _physics_process(delta: float) -> void:
 	# Apply gravity
@@ -27,6 +29,9 @@ func _physics_process(delta: float) -> void:
 		velocity.x = move_toward(velocity.x, 0.0, SPEED)
 		
 	move_and_slide()
+	if is_on_floor() and not was_on_floor:
+		land_sound.play()
+	was_on_floor = is_on_floor()
 	if is_on_floor() and direction != 0:
 		if not walk_sound.playing:
 			walk_sound.play()
