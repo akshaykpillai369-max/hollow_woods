@@ -118,5 +118,5 @@ volume_db = 12.806
 stream = ExtResource("5_qlg0r")
 autoplay = true
 
-[node name="JumpSound" type="AudioStreamPlayer" parent="." unique_id=830478184]
+[node name="JumpSound" type="AudioStreamPlayer" parent="." unique_id=2120241417]
 stream = ExtResource("6_tuyoq")
