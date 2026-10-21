@@ -26,8 +26,13 @@ func _on_settings_button_pressed() -> void:
 
 func _on_back_button_pressed() -> void:
 	$SettingsPanel.hide()
+	$HowtoPlayPanel.hide()
 
 
 func _on_main_menu_music_button_toggled(toggled_on: bool) -> void:
 	main_menu_music_enabled = toggled_on
 	$MenuMusic.playing = toggled_on
+
+
+func _on_how_to_play_pressed() -> void:
+	$HowtoPlayPanel.show()
