@@ -1,0 +1,167 @@
+[gd_scene format=3 uid="uid://dcm67pxvmj41k"]
+
+[ext_resource type="PackedScene" uid="uid://dym8scckddkqb" path="res://scenes/ground.tscn" id="1_0wfyh"]
+[ext_resource type="Script" uid="uid://bn7ngl5tmwu5" path="res://scripts/main.gd" id="1_tbgi4"]
+[ext_resource type="PackedScene" uid="uid://8j7hsrf16f0" path="res://scenes/player.tscn" id="2_sugp2"]
+[ext_resource type="PackedScene" uid="uid://c6iifnap50ulp" path="res://scenes/enemy.tscn" id="3_sugp2"]
+[ext_resource type="AudioStream" uid="uid://bdq4gss2c6udk" path="res://assets/soundeffects/level_music.mp3" id="4_jyhfs"]
+[ext_resource type="PackedScene" uid="uid://b1lcd3casttwu" path="res://scenes/spike.tscn" id="6_tefeu"]
+[ext_resource type="PackedScene" uid="uid://gpqdputycit2" path="res://scenes/death_screen.tscn" id="7_o6xl0"]
+[ext_resource type="PackedScene" uid="uid://c50whvid6nv6n" path="res://scenes/rock.tscn" id="8_tipki"]
+[ext_resource type="PackedScene" uid="uid://52uharlxyeji" path="res://scenes/hovering_ground.tscn" id="9_85g3d"]
+[ext_resource type="FontFile" uid="uid://dvrkigp4rd1xo" path="res://assets/fonts/PressStart2P-Regular.ttf" id="9_eb6dy"]
+[ext_resource type="PackedScene" uid="uid://0cpwxmjojfpc" path="res://scenes/key.tscn" id="10_choun"]
+[ext_resource type="PackedScene" uid="uid://d24ggyj8i4k2e" path="res://scenes/winner_screen.tscn" id="10_trceg"]
+[ext_resource type="PackedScene" uid="uid://de2psflxmuajc" path="res://scenes/door.tscn" id="11_ya4ey"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n7nmp"]
+size = Vector2(108, 716)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_unhky"]
+size = Vector2(136, 218)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8h2m0"]
+size = Vector2(240.5, 217.5)
+
+[node name="level1" type="Node2D" unique_id=2089548068]
+script = ExtResource("1_tbgi4")
+
+[node name="Ground" parent="." unique_id=1932350716 instance=ExtResource("1_0wfyh")]
+position = Vector2(1, 13)
+
+[node name="Ground2" parent="." unique_id=117637961 instance=ExtResource("1_0wfyh")]
+position = Vector2(1153, 13)
+
+[node name="Ground3" parent="." unique_id=5861961 instance=ExtResource("1_0wfyh")]
+position = Vector2(2304, 13)
+
+[node name="Ground4" parent="." unique_id=818509051 instance=ExtResource("1_0wfyh")]
+position = Vector2(-1151, 13)
+
+[node name="Ground5" parent="." unique_id=723496604 instance=ExtResource("1_0wfyh")]
+position = Vector2(3457, 13)
+
+[node name="Area2D" parent="." unique_id=563170387 instance=ExtResource("8_tipki")]
+position = Vector2(-189, 313)
+
+[node name="Area2D2" parent="." unique_id=1498764463 instance=ExtResource("8_tipki")]
+position = Vector2(667, 313)
+
+[node name="Area2D3" parent="." unique_id=410454900 instance=ExtResource("8_tipki")]
+position = Vector2(1293, 315)
+
+[node name="Area2D4" parent="." unique_id=181247783 instance=ExtResource("8_tipki")]
+position = Vector2(1985, 317)
+
+[node name="Area2D5" parent="." unique_id=1614736799 instance=ExtResource("8_tipki")]
+position = Vector2(2992, 315)
+
+[node name="Player" parent="." unique_id=1567295188 instance=ExtResource("2_sugp2")]
+position = Vector2(-282, 121)
+
+[node name="AnimatedSprite2D" parent="Player" index="0" unique_id=1993292878]
+position = Vector2(705.62476, 457.375)
+
+[node name="CollisionShape2D" parent="Player" index="1" unique_id=1789058853]
+position = Vector2(713.9375, 476.5)
+
+[node name="Camera2D" parent="Player" index="2" unique_id=180238180]
+position = Vector2(1282, 366)
+
+[node name="Enemy" parent="." unique_id=179718117 instance=ExtResource("3_sugp2")]
+position = Vector2(-528, 297)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=586361335]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=301477303]
+position = Vector2(-51, 310)
+shape = SubResource("RectangleShape2D_n7nmp")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="." unique_id=680895151]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2" unique_id=475384587]
+position = Vector2(3507, 379)
+shape = SubResource("RectangleShape2D_n7nmp")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="." unique_id=1859708027]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3" unique_id=834390322]
+position = Vector2(3064, -210)
+shape = SubResource("RectangleShape2D_n7nmp")
+
+[node name="LevelMusic" type="AudioStreamPlayer" parent="." unique_id=537326415]
+stream = ExtResource("4_jyhfs")
+volume_db = -13.5
+
+[node name="MonsterTrigger" type="Area2D" parent="." unique_id=1895320217]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MonsterTrigger" unique_id=198374186]
+position = Vector2(764, 553)
+shape = SubResource("RectangleShape2D_unhky")
+
+[node name="Spike" parent="." unique_id=1951884892 instance=ExtResource("6_tefeu")]
+position = Vector2(684, 661)
+
+[node name="UI" type="CanvasLayer" parent="." unique_id=955424061]
+
+[node name="DeathScreen" parent="UI" unique_id=621254565 instance=ExtResource("7_o6xl0")]
+offset_left = 445.0
+offset_top = -3.0
+offset_right = 485.0
+offset_bottom = 37.0
+
+[node name="DoorLockedLabel" type="Label" parent="UI" unique_id=675427836]
+visible = false
+offset_left = 623.0
+offset_top = 45.0
+offset_right = 1003.0
+offset_bottom = 135.0
+theme_override_constants/line_spacing = 15
+theme_override_fonts/font = ExtResource("9_eb6dy")
+theme_override_font_sizes/font_size = 20
+text = "DOOR IS LOCKED!
+YOU HAVE TO FIND A 
+       KEY"
+
+[node name="WinnerScreen" parent="UI" unique_id=162556210 instance=ExtResource("10_trceg")]
+offset_left = 465.0
+offset_right = 505.0
+
+[node name="HoveringGround" parent="." unique_id=1810480268 instance=ExtResource("9_85g3d")]
+position = Vector2(1443, 126)
+
+[node name="HoveringGround3" parent="." unique_id=1644537794 instance=ExtResource("9_85g3d")]
+position = Vector2(1879, -4)
+
+[node name="HoveringGround4" parent="." unique_id=294985640 instance=ExtResource("9_85g3d")]
+position = Vector2(2318, -168)
+
+[node name="HoveringGround2" parent="." unique_id=114991004 instance=ExtResource("9_85g3d")]
+position = Vector2(905, 169)
+
+[node name="CollisionShape2D" parent="HoveringGround2" index="0" unique_id=531210992]
+position = Vector2(635.5, 242.5)
+disabled = true
+
+[node name="Sprite2D" parent="HoveringGround2" index="1" unique_id=373699474]
+position = Vector2(637.65076, 319.40866)
+
+[node name="Key" parent="." unique_id=1300114925 instance=ExtResource("10_choun")]
+position = Vector2(1000, -194)
+
+[node name="HoverGroundShowTrigger" type="Area2D" parent="." unique_id=2035483004]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HoverGroundShowTrigger" unique_id=672794021]
+position = Vector2(1543.75, 78.25)
+shape = SubResource("RectangleShape2D_8h2m0")
+
+[node name="Door" parent="." unique_id=93755880 instance=ExtResource("11_ya4ey")]
+position = Vector2(1094, -707)
+scale = Vector2(2, 2)
+
+[connection signal="body_entered" from="MonsterTrigger" to="." method="_on_monster_trigger_body_entered"]
+[connection signal="body_entered" from="HoverGroundShowTrigger" to="." method="_on_hover_ground_show_trigger_body_entered"]
+
+[editable path="Player"]
+[editable path="UI/WinnerScreen"]
+[editable path="HoveringGround2"]
