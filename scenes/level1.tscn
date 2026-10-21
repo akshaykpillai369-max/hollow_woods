@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dcm67pxvmj41k"]
 
 [ext_resource type="PackedScene" uid="uid://dym8scckddkqb" path="res://scenes/ground.tscn" id="1_0wfyh"]
-[ext_resource type="Script" uid="uid://bn7ngl5tmwu5" path="res://scripts/main.gd" id="1_tbgi4"]
+[ext_resource type="Script" uid="uid://bn7ngl5tmwu5" path="res://scripts/level1.gd" id="1_tbgi4"]
 [ext_resource type="PackedScene" uid="uid://8j7hsrf16f0" path="res://scenes/player.tscn" id="2_sugp2"]
 [ext_resource type="PackedScene" uid="uid://c6iifnap50ulp" path="res://scenes/enemy.tscn" id="3_sugp2"]
 [ext_resource type="AudioStream" uid="uid://bdq4gss2c6udk" path="res://assets/soundeffects/level_music.mp3" id="4_jyhfs"]
@@ -127,6 +127,61 @@ YOU HAVE TO FIND A
 offset_left = 465.0
 offset_right = 505.0
 
+[node name="PlayGuide" type="Control" parent="UI" unique_id=1072175129]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 412.0
+offset_top = 37.0
+offset_right = 452.0
+offset_bottom = 77.0
+
+[node name="Background" type="ColorRect" parent="UI/PlayGuide" unique_id=1130489918]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 304.0
+offset_top = 162.0
+offset_right = 866.0
+offset_bottom = 456.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.06666667, 0.06666667, 0.06666667, 1)
+
+[node name="WinMessage" type="Label" parent="UI/PlayGuide" unique_id=2103324190]
+layout_mode = 0
+offset_left = 325.0
+offset_top = 191.0
+offset_right = 925.0
+offset_bottom = 272.0
+theme_override_fonts/font = ExtResource("9_eb6dy")
+theme_override_font_sizes/font_size = 25
+text = "DID YOU GOES THROUGH
+THE HOW TO PLAY SECTION 
+IN THE MAINMENU ?"
+
+[node name="MainMenuButton" type="Button" parent="UI/PlayGuide" unique_id=48511653]
+layout_mode = 0
+offset_left = 368.0
+offset_top = 379.0
+offset_right = 851.0
+offset_bottom = 423.0
+theme_override_fonts/font = ExtResource("9_eb6dy")
+theme_override_font_sizes/font_size = 25
+text = "NO, PLEASE TAKE ME 
+TO THAT"
+
+[node name="YesButton" type="Button" parent="UI/PlayGuide" unique_id=1021269516]
+layout_mode = 0
+offset_left = 463.0
+offset_top = 320.0
+offset_right = 746.0
+offset_bottom = 353.0
+theme_override_fonts/font = ExtResource("9_eb6dy")
+theme_override_font_sizes/font_size = 25
+text = "YES, I DID!"
+
 [node name="HoveringGround" parent="." unique_id=1810480268 instance=ExtResource("9_85g3d")]
 position = Vector2(1443, 126)
 
@@ -139,12 +194,12 @@ position = Vector2(2318, -168)
 [node name="HoveringGround2" parent="." unique_id=114991004 instance=ExtResource("9_85g3d")]
 position = Vector2(905, 169)
 
-[node name="CollisionShape2D" parent="HoveringGround2" index="0" unique_id=531210992]
+[node name="Sprite2D" parent="HoveringGround2" index="0" unique_id=373699474]
+position = Vector2(637.65076, 319.40866)
+
+[node name="CollisionShape2D" parent="HoveringGround2" index="1" unique_id=531210992]
 position = Vector2(635.5, 242.5)
 disabled = true
-
-[node name="Sprite2D" parent="HoveringGround2" index="1" unique_id=373699474]
-position = Vector2(637.65076, 319.40866)
 
 [node name="Key" parent="." unique_id=1300114925 instance=ExtResource("10_choun")]
 position = Vector2(1000, -194)
@@ -160,6 +215,9 @@ position = Vector2(1094, -707)
 scale = Vector2(2, 2)
 
 [connection signal="body_entered" from="MonsterTrigger" to="." method="_on_monster_trigger_body_entered"]
+[connection signal="pressed" from="UI/WinnerScreen/NextButton" to="." method="_on_next_button_pressed"]
+[connection signal="pressed" from="UI/PlayGuide/MainMenuButton" to="." method="_on_main_menu_button_pressed"]
+[connection signal="pressed" from="UI/PlayGuide/YesButton" to="." method="_on_yes_buuton_pressed"]
 [connection signal="body_entered" from="HoverGroundShowTrigger" to="." method="_on_hover_ground_show_trigger_body_entered"]
 
 [editable path="Player"]
