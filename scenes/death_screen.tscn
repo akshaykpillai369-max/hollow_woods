@@ -34,7 +34,7 @@ theme_override_constants/line_spacing = 13
 theme_override_fonts/font = ExtResource("1_uyutr")
 theme_override_font_sizes/font_size = 35
 text = "YOU'RE EATEN BY 
-THE MONSTER"
+  THE MONSTER"
 
 [node name="RetryButton" type="Button" parent="." unique_id=482727039]
 layout_mode = 0

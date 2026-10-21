@@ -50,6 +50,7 @@ func _physics_process(delta: float) -> void:
 		sprite.play("idle")
 		
 func die():
+	walk_sound.stop()
 	set_physics_process(false)
 	velocity = Vector2.ZERO
 	$DeathSound.play()

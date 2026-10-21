@@ -2,6 +2,8 @@
 
 [ext_resource type="Texture2D" uid="uid://bkdviajemntq8" path="res://assets/Enemy/Catto/Cat monster-Sheet Separated tags.png" id="1_prw7l"]
 [ext_resource type="Script" uid="uid://b7db0kyjo6jj0" path="res://scripts/catenemy.gd" id="1_vlfay"]
+[ext_resource type="AudioStream" uid="uid://dtod7sbyfgwjd" path="res://assets/soundeffects/vanish.mp3" id="3_r1c02"]
+[ext_resource type="AudioStream" uid="uid://ciir7cbe2iuc7" path="res://assets/soundeffects/kill.mp3" id="4_lskq5"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_prw7l"]
 atlas = ExtResource("1_prw7l")
@@ -166,3 +168,11 @@ frame_progress = 0.17360748
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1383442389]
 position = Vector2(623.5, 250.5)
 shape = SubResource("RectangleShape2D_unhky")
+
+[node name="VanishSound" type="AudioStreamPlayer2D" parent="." unique_id=140789122]
+stream = ExtResource("3_r1c02")
+volume_db = 5.821
+
+[node name="KillSound" type="AudioStreamPlayer2D" parent="." unique_id=958461829]
+stream = ExtResource("4_lskq5")
+volume_db = 5.821
