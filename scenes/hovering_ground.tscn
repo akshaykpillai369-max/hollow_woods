@@ -3,12 +3,12 @@
 [ext_resource type="Texture2D" uid="uid://d38pfjgoiscyi" path="res://assets/ground/dimensions/forest/forest_tiles.png" id="1_2me2k"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_n7nmp"]
-size = Vector2(217, 23)
+size = Vector2(225, 41)
 
 [node name="HoveringGround" type="StaticBody2D" unique_id=1644537794]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=531210992]
-position = Vector2(598.5, 233.5)
+position = Vector2(595.5, 242.5)
 shape = SubResource("RectangleShape2D_n7nmp")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=373699474]

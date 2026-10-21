@@ -9,6 +9,8 @@
 [ext_resource type="PackedScene" uid="uid://gpqdputycit2" path="res://scenes/death_screen.tscn" id="7_o6xl0"]
 [ext_resource type="PackedScene" uid="uid://c50whvid6nv6n" path="res://scenes/rock.tscn" id="8_tipki"]
 [ext_resource type="PackedScene" uid="uid://52uharlxyeji" path="res://scenes/hovering_ground.tscn" id="9_85g3d"]
+[ext_resource type="PackedScene" uid="uid://0cpwxmjojfpc" path="res://scenes/key.tscn" id="10_choun"]
+[ext_resource type="PackedScene" uid="uid://de2psflxmuajc" path="res://scenes/door.tscn" id="11_ya4ey"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_n7nmp"]
 size = Vector2(108, 716)
@@ -18,6 +20,9 @@ size = Vector2(136, 218)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7a7y0"]
 size = Vector2(145.25, 236.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8h2m0"]
+size = Vector2(240.5, 217.5)
 
 [node name="Main" type="Node2D" unique_id=2089548068]
 script = ExtResource("1_tbgi4")
@@ -109,14 +114,37 @@ offset_bottom = 37.0
 [node name="HoveringGround" parent="." unique_id=1810480268 instance=ExtResource("9_85g3d")]
 position = Vector2(1443, 126)
 
-[node name="HoveringGround2" parent="." unique_id=1644537794 instance=ExtResource("9_85g3d")]
+[node name="HoveringGround3" parent="." unique_id=1644537794 instance=ExtResource("9_85g3d")]
+position = Vector2(1879, -4)
+
+[node name="HoveringGround4" parent="." unique_id=294985640 instance=ExtResource("9_85g3d")]
+position = Vector2(2318, -168)
+
+[node name="HoveringGround2" parent="." unique_id=114991004 instance=ExtResource("9_85g3d")]
 position = Vector2(905, 169)
 
 [node name="CollisionShape2D" parent="HoveringGround2" index="0" unique_id=531210992]
+position = Vector2(635.5, 242.5)
 disabled = true
+
+[node name="Sprite2D" parent="HoveringGround2" index="1" unique_id=373699474]
+position = Vector2(637.65076, 319.40866)
+
+[node name="Key" parent="." unique_id=1300114925 instance=ExtResource("10_choun")]
+position = Vector2(1000, -194)
+
+[node name="HoverGroundShowTrigger" type="Area2D" parent="." unique_id=2035483004]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HoverGroundShowTrigger" unique_id=672794021]
+position = Vector2(1543.75, 78.25)
+shape = SubResource("RectangleShape2D_8h2m0")
+
+[node name="Door" parent="." unique_id=93755880 instance=ExtResource("11_ya4ey")]
+position = Vector2(2012, -400)
 
 [connection signal="body_entered" from="MonsterTrigger" to="." method="_on_monster_trigger_body_entered"]
 [connection signal="body_entered" from="SpikeEffectTrigger" to="." method="_on_spike_effect_trigger_body_entered"]
+[connection signal="body_entered" from="HoverGroundShowTrigger" to="." method="_on_hover_ground_show_trigger_body_entered"]
 
 [editable path="Player"]
 [editable path="HoveringGround2"]

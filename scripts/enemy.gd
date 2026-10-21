@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-@export var speed: float = 200.0
+@export var speed: float = 220.0
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
 var player: CharacterBody2D
 var caught_player: bool = false

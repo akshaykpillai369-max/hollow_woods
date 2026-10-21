@@ -22,3 +22,8 @@ func _on_monster_trigger_body_entered(body: Node2D) -> void:
 func _on_spike_effect_trigger_body_entered(body: Node2D) -> void:
 	$SpikeEffectTrigger.set_deferred("monitoring", false)
 	$SpikeEffectTrigger.set_deferred("monitorable", false)
+
+
+func _on_hover_ground_show_trigger_body_entered(body: Node2D) -> void:
+	if body == $Player:
+		$HoveringGround2/CollisionShape2D.set_deferred("disabled", false)
