@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://015bhuxs7drv"]
+
+[ext_resource type="FontFile" uid="uid://dvrkigp4rd1xo" path="res://assets/fonts/PressStart2P-Regular.ttf" id="1_f0ip2"]
+
+[node name="Label" type="Label" unique_id=594865259]
+offset_left = 775.0
+offset_top = 236.0
+offset_right = 1117.0
+offset_bottom = 431.0
+theme_override_fonts/font = ExtResource("1_f0ip2")
+theme_override_font_sizes/font_size = 30
+text = "LEVEL 3
+
+COMING SOON
+
+STAY TUNED
+"
