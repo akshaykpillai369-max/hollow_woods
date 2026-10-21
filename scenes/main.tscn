@@ -23,7 +23,7 @@ size = Vector2(136, 218)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8h2m0"]
 size = Vector2(240.5, 217.5)
 
-[node name="Main" type="Node2D" unique_id=2089548068]
+[node name="level1" type="Node2D" unique_id=2089548068]
 script = ExtResource("1_tbgi4")
 
 [node name="Ground" parent="." unique_id=1932350716 instance=ExtResource("1_0wfyh")]
@@ -69,7 +69,7 @@ position = Vector2(713.9375, 476.5)
 position = Vector2(1282, 366)
 
 [node name="Enemy" parent="." unique_id=179718117 instance=ExtResource("3_sugp2")]
-position = Vector2(-528, 296)
+position = Vector2(-528, 297)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=586361335]
 

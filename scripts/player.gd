@@ -5,7 +5,8 @@ const SPEED = 200.0
 const JUMP_VELOCITY = -800.0
 
 @onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
-
+@onready var walk_sound: AudioStreamPlayer = $WalkSound
+@onready var jump_sound: AudioStreamPlayer = $JumpSound
 
 func _physics_process(delta: float) -> void:
 	# Apply gravity
@@ -15,6 +16,7 @@ func _physics_process(delta: float) -> void:
 
 	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
+		jump_sound.play()
 		
 	var direction := Input.get_axis("ui_left", "ui_right")
 
@@ -23,9 +25,14 @@ func _physics_process(delta: float) -> void:
 		sprite.flip_h = direction < 0
 	else:
 		velocity.x = move_toward(velocity.x, 0.0, SPEED)
-
+		
 	move_and_slide()
-
+	if is_on_floor() and direction != 0:
+		if not walk_sound.playing:
+			walk_sound.play()
+	else:
+		walk_sound.stop()
+		
 	if not is_on_floor():
 		if sprite.sprite_frames.has_animation("jump"):
 			sprite.play("jump")
