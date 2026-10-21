@@ -27,3 +27,15 @@ func _on_spike_effect_trigger_body_entered(body: Node2D) -> void:
 func _on_hover_ground_show_trigger_body_entered(body: Node2D) -> void:
 	if body == $Player:
 		$HoveringGround2/CollisionShape2D.set_deferred("disabled", false)
+
+
+func _on_next_button_pressed() -> void:
+	get_tree().change_scene_to_file("res://scenes/level2.tscn")
+
+
+func _on_yes_buuton_pressed() -> void:
+	$UI/PlayGuide.hide()
+
+
+func _on_main_menu_button_pressed() -> void:
+	get_tree().change_scene_to_file("res://scenes/main_menu.tscn")
