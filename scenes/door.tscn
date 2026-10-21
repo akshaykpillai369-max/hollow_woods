@@ -1,9 +1,10 @@
 [gd_scene format=3 uid="uid://de2psflxmuajc"]
 
 [ext_resource type="Texture2D" uid="uid://w6xonusqelac" path="res://assets/horror_door.png" id="1_hpvv5"]
+[ext_resource type="Script" uid="uid://cokxvtbxlfl1g" path="res://scripts/door.gd" id="1_uvdjg"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_unhky"]
-size = Vector2(72, 85)
+size = Vector2(71, 85)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_uvdjg"]
 atlas = ExtResource("1_hpvv5")
@@ -22,15 +23,16 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_83dcw")
 }],
-"loop": 1,
+"loop": 0,
 "name": &"openclose",
 "speed": 5.0
 }]
 
 [node name="Door" type="Area2D" unique_id=93755880]
+script = ExtResource("1_uvdjg")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=590443507]
-position = Vector2(932, 337.5)
+position = Vector2(932.5, 337.5)
 shape = SubResource("RectangleShape2D_unhky")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1232478263]
@@ -38,4 +40,3 @@ position = Vector2(935.00006, 334)
 scale = Vector2(7.0312486, 6.740385)
 sprite_frames = SubResource("SpriteFrames_n7nmp")
 animation = &"openclose"
-frame_progress = 0.9835293

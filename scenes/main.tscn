@@ -9,7 +9,9 @@
 [ext_resource type="PackedScene" uid="uid://gpqdputycit2" path="res://scenes/death_screen.tscn" id="7_o6xl0"]
 [ext_resource type="PackedScene" uid="uid://c50whvid6nv6n" path="res://scenes/rock.tscn" id="8_tipki"]
 [ext_resource type="PackedScene" uid="uid://52uharlxyeji" path="res://scenes/hovering_ground.tscn" id="9_85g3d"]
+[ext_resource type="FontFile" uid="uid://dvrkigp4rd1xo" path="res://assets/fonts/PressStart2P-Regular.ttf" id="9_eb6dy"]
 [ext_resource type="PackedScene" uid="uid://0cpwxmjojfpc" path="res://scenes/key.tscn" id="10_choun"]
+[ext_resource type="PackedScene" uid="uid://d24ggyj8i4k2e" path="res://scenes/winner_screen.tscn" id="10_trceg"]
 [ext_resource type="PackedScene" uid="uid://de2psflxmuajc" path="res://scenes/door.tscn" id="11_ya4ey"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_n7nmp"]
@@ -84,6 +86,12 @@ shape = SubResource("RectangleShape2D_n7nmp")
 position = Vector2(3507, 379)
 shape = SubResource("RectangleShape2D_n7nmp")
 
+[node name="StaticBody2D3" type="StaticBody2D" parent="." unique_id=1859708027]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3" unique_id=834390322]
+position = Vector2(3064, -210)
+shape = SubResource("RectangleShape2D_n7nmp")
+
 [node name="LevelMusic" type="AudioStreamPlayer2D" parent="." unique_id=1680915799]
 stream = ExtResource("4_jyhfs")
 volume_db = 5.821
@@ -110,6 +118,23 @@ offset_left = 445.0
 offset_top = -3.0
 offset_right = 485.0
 offset_bottom = 37.0
+
+[node name="DoorLockedLabel" type="Label" parent="UI" unique_id=675427836]
+visible = false
+offset_left = 623.0
+offset_top = 45.0
+offset_right = 1003.0
+offset_bottom = 135.0
+theme_override_constants/line_spacing = 15
+theme_override_fonts/font = ExtResource("9_eb6dy")
+theme_override_font_sizes/font_size = 20
+text = "DOOR IS LOCKED!
+YOU HAVE TO FIND A 
+       KEY"
+
+[node name="WinnerScreen" parent="UI" unique_id=162556210 instance=ExtResource("10_trceg")]
+offset_left = 465.0
+offset_right = 505.0
 
 [node name="HoveringGround" parent="." unique_id=1810480268 instance=ExtResource("9_85g3d")]
 position = Vector2(1443, 126)
@@ -140,11 +165,13 @@ position = Vector2(1543.75, 78.25)
 shape = SubResource("RectangleShape2D_8h2m0")
 
 [node name="Door" parent="." unique_id=93755880 instance=ExtResource("11_ya4ey")]
-position = Vector2(2012, -400)
+position = Vector2(1094, -707)
+scale = Vector2(2, 2)
 
 [connection signal="body_entered" from="MonsterTrigger" to="." method="_on_monster_trigger_body_entered"]
 [connection signal="body_entered" from="SpikeEffectTrigger" to="." method="_on_spike_effect_trigger_body_entered"]
 [connection signal="body_entered" from="HoverGroundShowTrigger" to="." method="_on_hover_ground_show_trigger_body_entered"]
 
 [editable path="Player"]
+[editable path="UI/WinnerScreen"]
 [editable path="HoveringGround2"]

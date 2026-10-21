@@ -18,6 +18,7 @@ layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_right = 447.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_wu84c")
@@ -27,7 +28,7 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 379.0
+offset_left = -2.0
 offset_right = -434.0
 grow_horizontal = 2
 grow_vertical = 2
@@ -37,10 +38,10 @@ stretch_mode = 6
 
 [node name="Title" type="Label" parent="." unique_id=375436525]
 layout_mode = 0
-offset_left = 570.0
-offset_top = 158.0
-offset_right = 1338.0
-offset_bottom = 222.0
+offset_left = 616.0
+offset_top = 147.0
+offset_right = 1384.0
+offset_bottom = 211.0
 theme_override_colors/font_color = Color(0.8980392, 0.8784314, 0, 1)
 theme_override_colors/font_shadow_color = Color(0, 0.7033931, 0.43270096, 0)
 theme_override_colors/font_outline_color = Color(0.99150366, 0.97174007, 0.95751363, 1)
@@ -50,10 +51,10 @@ text = "HOLLOW WOODS"
 
 [node name="PlayButton" type="Button" parent="." unique_id=634956321]
 layout_mode = 0
-offset_left = 857.0
-offset_top = 284.0
-offset_right = 985.0
-offset_bottom = 334.0
+offset_left = 914.0
+offset_top = 266.0
+offset_right = 1042.0
+offset_bottom = 316.0
 theme_override_colors/font_outline_color = Color(0.44814438, 0.416661, 0.08094307, 1)
 theme_override_fonts/font = ExtResource("3_rtw2f")
 theme_override_font_sizes/font_size = 30
@@ -65,10 +66,10 @@ autoplay = true
 
 [node name="SettingsButton" type="Button" parent="." unique_id=1036801133]
 layout_mode = 0
-offset_left = 802.0
-offset_top = 353.0
-offset_right = 1050.0
-offset_bottom = 414.0
+offset_left = 852.0
+offset_top = 328.0
+offset_right = 1100.0
+offset_bottom = 389.0
 theme_override_fonts/font = ExtResource("3_rtw2f")
 theme_override_font_sizes/font_size = 30
 text = "SETTINGS"

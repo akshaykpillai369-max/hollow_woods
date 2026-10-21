@@ -9,8 +9,8 @@ size = Vector2(1175, 67)
 [node name="Ground" type="Node2D" unique_id=1932350716]
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=500663171]
-position = Vector2(575.31244, 66.49997)
-scale = Vector2(2.2526853, 3.2472224)
+position = Vector2(575.31244, -80.99996)
+scale = Vector2(2.2526853, 4.066667)
 texture = ExtResource("1_pybca")
 region_rect = Rect2(63.222237, 0, 64.711105, 48.284004)
 
