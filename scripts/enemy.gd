@@ -1,6 +1,7 @@
 extends CharacterBody2D
 
-@export var speed: float = 225.0
+const SPEED = 225.0
+@export var enemy_current_speed = SPEED
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
 var player: CharacterBody2D
 var caught_player: bool = false
@@ -15,7 +16,7 @@ func _physics_process(_delta: float) -> void:
 	if not is_instance_valid(player) or caught_player:
 		return
 	var direction := signf(player.global_position.x - global_position.x)
-	velocity.x = direction * speed
+	velocity.x = direction * enemy_current_speed
 	move_and_slide()
 	for i in get_slide_collision_count():
 		var collision := get_slide_collision(i)

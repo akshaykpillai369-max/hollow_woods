@@ -2,6 +2,7 @@
 extends CharacterBody2D
 
 const SPEED = 200.0
+@export var player_current_speed = SPEED
 const JUMP_VELOCITY = -800.0
 
 @onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
@@ -23,10 +24,10 @@ func _physics_process(delta: float) -> void:
 	var direction := Input.get_axis("ui_left", "ui_right")
 
 	if direction != 0:
-		velocity.x = direction * SPEED
+		velocity.x = direction * player_current_speed
 		sprite.flip_h = direction < 0
 	else:
-		velocity.x = move_toward(velocity.x, 0.0, SPEED)
+		velocity.x = move_toward(velocity.x, 0.0, player_current_speed)
 		
 	move_and_slide()
 	if is_on_floor() and not was_on_floor:
