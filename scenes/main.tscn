@@ -20,9 +20,6 @@ size = Vector2(108, 716)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_unhky"]
 size = Vector2(136, 218)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_7a7y0"]
-size = Vector2(145.25, 236.5)
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8h2m0"]
 size = Vector2(240.5, 217.5)
 
@@ -92,21 +89,15 @@ shape = SubResource("RectangleShape2D_n7nmp")
 position = Vector2(3064, -210)
 shape = SubResource("RectangleShape2D_n7nmp")
 
-[node name="LevelMusic" type="AudioStreamPlayer2D" parent="." unique_id=1680915799]
+[node name="LevelMusic" type="AudioStreamPlayer" parent="." unique_id=537326415]
 stream = ExtResource("4_jyhfs")
-volume_db = 5.821
+volume_db = -13.5
 
 [node name="MonsterTrigger" type="Area2D" parent="." unique_id=1895320217]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="MonsterTrigger" unique_id=198374186]
 position = Vector2(764, 553)
 shape = SubResource("RectangleShape2D_unhky")
-
-[node name="SpikeEffectTrigger" type="Area2D" parent="." unique_id=956744818]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SpikeEffectTrigger" unique_id=1365288505]
-position = Vector2(995, 544)
-shape = SubResource("RectangleShape2D_7a7y0")
 
 [node name="Spike" parent="." unique_id=1951884892 instance=ExtResource("6_tefeu")]
 position = Vector2(684, 661)
@@ -169,7 +160,6 @@ position = Vector2(1094, -707)
 scale = Vector2(2, 2)
 
 [connection signal="body_entered" from="MonsterTrigger" to="." method="_on_monster_trigger_body_entered"]
-[connection signal="body_entered" from="SpikeEffectTrigger" to="." method="_on_spike_effect_trigger_body_entered"]
 [connection signal="body_entered" from="HoverGroundShowTrigger" to="." method="_on_hover_ground_show_trigger_body_entered"]
 
 [editable path="Player"]
