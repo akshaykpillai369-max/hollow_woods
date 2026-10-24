@@ -24,6 +24,13 @@ func _process(_delta: float) -> void:
 				is_open = true
 				get_parent().get_node_or_null("UI/WinnerScreen").show()
 				get_parent().set_physics_process(false)
+				GameManager.reached_door = true
+				if GameManager.current_level < Settings.highest_unlocked_level:
+					pass
+				elif GameManager.current_level == Settings.highest_unlocked_level:
+					
+					Settings.highest_unlocked_level = GameManager.current_level + 1
+					Settings.save_progress()
 				
 		else:
 			get_parent().get_node_or_null("UI/DoorLockedLabel").show()

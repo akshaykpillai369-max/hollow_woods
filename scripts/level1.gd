@@ -3,7 +3,13 @@ extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	if Settings.guide_message_shown == false:
+		pass
+	else:
+		$UI/PlayGuide.visible = false
+	
 	$LevelMusic.play()
+	GameManager.reached_door = false
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -35,6 +41,7 @@ func _on_next_button_pressed() -> void:
 
 func _on_yes_buuton_pressed() -> void:
 	$UI/PlayGuide.hide()
+	Settings.guide_message_shown = true
 
 
 func _on_main_menu_button_pressed() -> void:

@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://d24ggyj8i4k2e"]
 
-[ext_resource type="Script" uid="uid://dfb0xk1y4dj0g" path="res://scripts/winner_screen.gd" id="1_8sj2o"]
+[ext_resource type="Script" uid="uid://chsw65k5365kc" path="res://scripts/winner_screen.gd" id="1_8sj2o"]
 [ext_resource type="FontFile" uid="uid://dvrkigp4rd1xo" path="res://assets/fonts/PressStart2P-Regular.ttf" id="1_mm6lb"]
 
 [node name="WinnerScreen" type="Control" unique_id=162556210]

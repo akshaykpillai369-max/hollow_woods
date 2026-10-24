@@ -10,13 +10,14 @@ var main_menu_music_enabled := true
 var level_music_enabled := true
 
 func _ready() -> void:
+	Settings.load_progress()
 	label.visible_ratio = 0.0
 	var tween = create_tween().set_trans(Tween.TRANS_LINEAR)
 	tween.tween_property(label, "visible_ratio", 1.0, TIME_TO_DISPLAY_SECONDS)
 	
 func _on_play_button_pressed() -> void:
 	
-	get_tree().change_scene_to_file('res://scenes/level1.tscn')
+	get_tree().change_scene_to_file('res://scenes/level_select.tscn')
 	
 
 

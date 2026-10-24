@@ -5,6 +5,7 @@ extends Node2D
 func _ready() -> void:
 	$LevelMusic.play()
 	GameManager.has_key = false
+	GameManager.current_level = 2
 
 func _on_monster_trigger_body_entered(body: Node2D) -> void:
 	if body == $Player:
