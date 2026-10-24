@@ -4,7 +4,8 @@ This is a 2d horror game which consists of monsters and traps
 
 # Description
 
-This is my first horror game project, I able to learn more about godot things via this project
+This is my first horror game project, I able to learn more about godot things via this project.
+What is the objective: its simple , 'SURVIVE!'
 
 # Why I made this
 
@@ -15,6 +16,15 @@ I made this as a part of 3 am challenge of hackclub
 - 2d game
 - Horror vibe
 - Horror music for main menu and levels
+- level selection
+- next level unlock automatically on the completion of the previous level
+
+# How to play
+- go to this link: https://akshay369.itch.io/hollow-woods
+- so as said primary objective is to survive
+- to survive each level you have to find a key in each level
+- Then reach the door and press E
+- Congrats you completed the level
 
 # Credits
 - main menu music - https://pixabay.com/music/scary-childrens-tunes-halloween-suspense-horror-halloween-waltz-619348/
@@ -35,6 +45,10 @@ I made this as a part of 3 am challenge of hackclub
 # AI declaration
 
 I used AI to just plan each level
+
+# Tech Stack
+
+- Godot
 
 # Screenshots
 
