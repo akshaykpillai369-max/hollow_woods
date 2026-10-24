@@ -1,17 +1,175 @@
-[gd_scene format=3 uid="uid://015bhuxs7drv"]
+[gd_scene format=3 uid="uid://cfv1oxl0g5eah"]
 
+[ext_resource type="Script" uid="uid://dkwo2oeeo08t7" path="res://scripts/level3.gd" id="1_bradm"]
 [ext_resource type="FontFile" uid="uid://dvrkigp4rd1xo" path="res://assets/fonts/PressStart2P-Regular.ttf" id="1_f0ip2"]
+[ext_resource type="PackedScene" uid="uid://dym8scckddkqb" path="res://scenes/ground.tscn" id="2_got4s"]
+[ext_resource type="PackedScene" uid="uid://c50whvid6nv6n" path="res://scenes/rock.tscn" id="3_e40mx"]
+[ext_resource type="PackedScene" uid="uid://8j7hsrf16f0" path="res://scenes/player.tscn" id="4_a114e"]
+[ext_resource type="PackedScene" uid="uid://c6iifnap50ulp" path="res://scenes/enemy.tscn" id="5_y1e0c"]
+[ext_resource type="AudioStream" uid="uid://bdq4gss2c6udk" path="res://assets/soundeffects/level_music.mp3" id="6_s4dsi"]
+[ext_resource type="PackedScene" uid="uid://gpqdputycit2" path="res://scenes/death_screen.tscn" id="7_07lh1"]
+[ext_resource type="PackedScene" uid="uid://d24ggyj8i4k2e" path="res://scenes/winner_screen.tscn" id="9_6uuvf"]
+[ext_resource type="PackedScene" uid="uid://52uharlxyeji" path="res://scenes/hovering_ground.tscn" id="10_x008a"]
+[ext_resource type="PackedScene" uid="uid://dx4cilqk2ikk" path="res://scenes/catenemy.tscn" id="11_atr84"]
+[ext_resource type="PackedScene" uid="uid://0cpwxmjojfpc" path="res://scenes/key.tscn" id="12_qyu38"]
+[ext_resource type="PackedScene" uid="uid://de2psflxmuajc" path="res://scenes/door.tscn" id="13_8vbrh"]
 
-[node name="Label" type="Label" unique_id=594865259]
-offset_left = 775.0
-offset_top = 236.0
-offset_right = 1117.0
-offset_bottom = 431.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n7nmp"]
+size = Vector2(108, 716)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_unhky"]
+size = Vector2(136, 218)
+
+[node name="level3" type="Node2D" unique_id=2089548068]
+script = ExtResource("1_bradm")
+
+[node name="Ground" parent="." unique_id=1932350716 instance=ExtResource("2_got4s")]
+position = Vector2(1, 13)
+
+[node name="Ground2" parent="." unique_id=117637961 instance=ExtResource("2_got4s")]
+position = Vector2(1153, 13)
+
+[node name="Ground3" parent="." unique_id=5861961 instance=ExtResource("2_got4s")]
+position = Vector2(2304, 13)
+
+[node name="Ground4" parent="." unique_id=818509051 instance=ExtResource("2_got4s")]
+position = Vector2(-1151, 13)
+
+[node name="Ground5" parent="." unique_id=723496604 instance=ExtResource("2_got4s")]
+position = Vector2(3457, 13)
+
+[node name="Area2D" parent="." unique_id=563170387 instance=ExtResource("3_e40mx")]
+position = Vector2(-189, 313)
+
+[node name="Area2D2" parent="." unique_id=1498764463 instance=ExtResource("3_e40mx")]
+position = Vector2(667, 313)
+
+[node name="Area2D3" parent="." unique_id=410454900 instance=ExtResource("3_e40mx")]
+position = Vector2(1293, 315)
+
+[node name="Area2D4" parent="." unique_id=181247783 instance=ExtResource("3_e40mx")]
+position = Vector2(1985, 317)
+
+[node name="Area2D5" parent="." unique_id=1614736799 instance=ExtResource("3_e40mx")]
+position = Vector2(2992, 315)
+
+[node name="Player" parent="." unique_id=1567295188 instance=ExtResource("4_a114e")]
+position = Vector2(-282, 121)
+
+[node name="AnimatedSprite2D" parent="Player" index="0" unique_id=1993292878]
+position = Vector2(705.62476, 457.375)
+
+[node name="CollisionShape2D" parent="Player" index="1" unique_id=1789058853]
+position = Vector2(713.9375, 476.5)
+
+[node name="Camera2D" parent="Player" index="2" unique_id=180238180]
+position = Vector2(1282, 366)
+
+[node name="Enemy" parent="." unique_id=179718117 instance=ExtResource("5_y1e0c")]
+position = Vector2(-675, 297)
+enemy_current_speed = 200.0
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=586361335]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=301477303]
+position = Vector2(-51, 310)
+shape = SubResource("RectangleShape2D_n7nmp")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="." unique_id=680895151]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2" unique_id=475384587]
+position = Vector2(3520, 309)
+shape = SubResource("RectangleShape2D_n7nmp")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="." unique_id=1859708027]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3" unique_id=834390322]
+position = Vector2(3517, -384)
+shape = SubResource("RectangleShape2D_n7nmp")
+
+[node name="LevelMusic" type="AudioStreamPlayer" parent="." unique_id=537326415]
+stream = ExtResource("6_s4dsi")
+volume_db = -13.5
+
+[node name="MonsterTrigger" type="Area2D" parent="." unique_id=1895320217]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MonsterTrigger" unique_id=198374186]
+position = Vector2(598, 559)
+shape = SubResource("RectangleShape2D_unhky")
+
+[node name="UI" type="CanvasLayer" parent="." unique_id=955424061]
+
+[node name="DeathScreen" parent="UI" unique_id=621254565 instance=ExtResource("7_07lh1")]
+offset_left = 445.0
+offset_top = -3.0
+offset_right = 485.0
+offset_bottom = 37.0
+
+[node name="DoorLockedLabel" type="Label" parent="UI" unique_id=675427836]
+visible = false
+offset_left = 623.0
+offset_top = 45.0
+offset_right = 1003.0
+offset_bottom = 135.0
+theme_override_constants/line_spacing = 15
 theme_override_fonts/font = ExtResource("1_f0ip2")
-theme_override_font_sizes/font_size = 30
-text = "LEVEL 3
+theme_override_font_sizes/font_size = 20
+text = "DOOR IS LOCKED!
+YOU HAVE TO FIND A 
+       KEY"
 
-COMING SOON
+[node name="WinnerScreen" parent="UI" unique_id=162556210 instance=ExtResource("9_6uuvf")]
+offset_left = 465.0
+offset_right = 505.0
 
-STAY TUNED
-"
+[node name="HoveringGround" parent="." unique_id=1810480268 instance=ExtResource("10_x008a")]
+position = Vector2(611, -400)
+
+[node name="CatEnemy" parent="." unique_id=241727710 instance=ExtResource("11_atr84")]
+position = Vector2(686, -20)
+
+[node name="CatEnemy2" parent="." unique_id=1355058841 instance=ExtResource("11_atr84")]
+position = Vector2(519, -472)
+
+[node name="CatEnemy3" parent="." unique_id=1841285288 instance=ExtResource("11_atr84")]
+position = Vector2(1432, -420)
+
+[node name="CatEnemy4" parent="." unique_id=236502867 instance=ExtResource("11_atr84")]
+position = Vector2(1138, -185)
+
+[node name="HoveringGround3" parent="." unique_id=1644537794 instance=ExtResource("10_x008a")]
+position = Vector2(773, 51)
+
+[node name="HoveringGround5" parent="." unique_id=1768236530 instance=ExtResource("10_x008a")]
+position = Vector2(1214, -117)
+
+[node name="HoveringGround6" parent="." unique_id=2113939883 instance=ExtResource("10_x008a")]
+position = Vector2(1519, -347)
+
+[node name="HoveringGround7" parent="." unique_id=1396836442 instance=ExtResource("10_x008a")]
+position = Vector2(2046, -494)
+
+[node name="HoveringGround9" parent="." unique_id=168210493 instance=ExtResource("10_x008a")]
+position = Vector2(2616, -390)
+
+[node name="HoveringGround4" parent="." unique_id=294985640 instance=ExtResource("10_x008a")]
+position = Vector2(2318, -53)
+
+[node name="HoveringGround8" parent="." unique_id=434491108 instance=ExtResource("10_x008a")]
+position = Vector2(1934, -182)
+
+[node name="HoveringGround2" parent="." unique_id=114991004 instance=ExtResource("10_x008a")]
+position = Vector2(251, 150)
+
+[node name="Key" parent="." unique_id=1300114925 instance=ExtResource("12_qyu38")]
+position = Vector2(1805, -712)
+
+[node name="Door" parent="." unique_id=93755880 instance=ExtResource("13_8vbrh")]
+position = Vector2(1513, -97)
+scale = Vector2(2, 2)
+
+[connection signal="body_entered" from="MonsterTrigger" to="." method="_on_monster_trigger_body_entered"]
+[connection signal="pressed" from="UI/WinnerScreen/NextButton" to="." method="_on_next_button_pressed"]
+
+[editable path="Player"]
+[editable path="UI/WinnerScreen"]

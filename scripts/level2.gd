@@ -4,6 +4,7 @@ extends Node2D
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	$LevelMusic.play()
+	GameManager.has_key = false
 
 func _on_monster_trigger_body_entered(body: Node2D) -> void:
 	if body == $Player:
