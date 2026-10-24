@@ -12,3 +12,5 @@
 Thumbs.db
 *.tmp
 *.temp
+/exports
+export_presets.cfg
