@@ -42,14 +42,16 @@ I made this as a part of 3 am challenge of hackclub
 - jump sound- https://pixabay.com/sound-effects/film-special-effects-jump-sound-531048/
 - Readme format by @FaizeenHoque, given to me by Hackclub pixl team
 - main menu design and logic - from my previous game trollbound (https://github.com/akshaykpillai369-max/trollbound)
+- level menu design and logic - from my previous game trollbound (https://github.com/akshaykpillai369-max/trollbound)
 
 # AI declaration
 
-I used AI to just plan each level
+I used AI to just plan first few level, I think maximum upto level 2 or 3. All other levels are planned and implemented by me
 
 # Tech Stack
 
 - Godot
+- GDScript
 
 # Screenshots
 
@@ -70,6 +72,14 @@ I used AI to just plan each level
 
 - Level 5
   <img width="1517" height="717" alt="image" src="https://github.com/user-attachments/assets/aaa8a88e-40a4-423c-8d49-523207ed3923" />
+
+- Level 6
+  <img width="1512" height="706" alt="image" src="https://github.com/user-attachments/assets/fe25173a-6ca8-4ced-8da1-6055794e2e4d" />
+
+- Level 7
+   <img width="1522" height="737" alt="image" src="https://github.com/user-attachments/assets/4d494e31-a33b-496a-9679-4e5dc9d70a45" />
+
+
 
 
 
