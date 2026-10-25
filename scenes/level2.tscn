@@ -152,6 +152,25 @@ position = Vector2(573, -66)
 position = Vector2(1094, -707)
 scale = Vector2(2, 2)
 
+[node name="Ground11" parent="." unique_id=1769279960 instance=ExtResource("2_ve5ok")]
+position = Vector2(283.00012, -1591)
+rotation = 3.1468287
+
+[node name="Ground6" parent="Ground11" unique_id=1388642454 instance=ExtResource("2_ve5ok")]
+position = Vector2(282.0486, 8.523315)
+
+[node name="Ground10" parent="Ground11" unique_id=1060510470 instance=ExtResource("2_ve5ok")]
+position = Vector2(-893.9042, 20.680908)
+
+[node name="Ground9" parent="Ground11" unique_id=1451807244 instance=ExtResource("2_ve5ok")]
+position = Vector2(-2038.9727, 10.676025)
+
+[node name="Ground8" parent="Ground11" unique_id=812270299 instance=ExtResource("2_ve5ok")]
+position = Vector2(-3180.9463, 18.655762)
+
+[node name="Ground7" parent="Ground11" unique_id=405861067 instance=ExtResource("2_ve5ok")]
+position = Vector2(-4327.904, 29.66101)
+
 [connection signal="body_entered" from="MonsterTrigger" to="." method="_on_monster_trigger_body_entered"]
 [connection signal="pressed" from="UI/WinnerScreen/NextButton" to="." method="_on_next_button_pressed"]
 
