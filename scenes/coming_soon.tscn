@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://du2ppfkaqbvv0"]
+
+[ext_resource type="FontFile" uid="uid://dvrkigp4rd1xo" path="res://assets/fonts/PressStart2P-Regular.ttf" id="1_p463o"]
+
+[node name="ComingSoon" type="Node2D" unique_id=1675119804]
+
+[node name="Label" type="Label" parent="." unique_id=321756073]
+offset_left = 807.0
+offset_top = 268.0
+offset_right = 1082.0
+offset_bottom = 293.0
+theme_override_fonts/font = ExtResource("1_p463o")
+theme_override_font_sizes/font_size = 25
+text = "COMING SOON"
