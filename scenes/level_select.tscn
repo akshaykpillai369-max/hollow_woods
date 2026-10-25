@@ -3,14 +3,22 @@
 [ext_resource type="FontFile" uid="uid://dvrkigp4rd1xo" path="res://assets/fonts/PressStart2P-Regular.ttf" id="1_mk87e"]
 [ext_resource type="Script" uid="uid://01fl1rpb8oer" path="res://scripts/level_select.gd" id="1_ygvyp"]
 [ext_resource type="AudioStream" uid="uid://bouo3ka51ycb0" path="res://assets/soundeffects/main_menu_music.mp3" id="2_p0wlc"]
+[ext_resource type="Texture2D" uid="uid://iyu00p3l7rnw" path="res://assets/background.png" id="2_rif6e"]
 
 [node name="LevelSelect" type="Node2D" unique_id=1038694459]
 script = ExtResource("1_ygvyp")
 
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1020779489]
+offset_left = 7.0
+offset_top = 2.0
+offset_right = 1926.0
+offset_bottom = 943.0
+texture = ExtResource("2_rif6e")
+
 [node name="Title" type="Label" parent="." unique_id=1077587472]
-offset_left = 726.0
+offset_left = 778.0
 offset_top = 18.0
-offset_right = 1086.0
+offset_right = 1138.0
 offset_bottom = 48.0
 theme_override_fonts/font = ExtResource("1_mk87e")
 theme_override_font_sizes/font_size = 30
