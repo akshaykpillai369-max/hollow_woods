@@ -1,6 +1,9 @@
 [gd_scene format=3 uid="uid://ck4g3w36bvl8t"]
 
 [ext_resource type="Texture2D" uid="uid://ca2yg0ptxwmil" path="res://assets/Enemy/Mad Ghost/Mad Ghost-Sheet Separated tags.png" id="1_t76o2"]
+[ext_resource type="Script" uid="uid://b0pln8ysydgka" path="res://scripts/ghost.gd" id="1_veat2"]
+[ext_resource type="AudioStream" uid="uid://dtod7sbyfgwjd" path="res://assets/soundeffects/vanish.mp3" id="3_5mfnq"]
+[ext_resource type="AudioStream" uid="uid://ciir7cbe2iuc7" path="res://assets/soundeffects/kill.mp3" id="4_lv6vd"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_l5lq6"]
 atlas = ExtResource("1_t76o2")
@@ -194,6 +197,7 @@ animations = [{
 size = Vector2(80, 81)
 
 [node name="ghost" type="CharacterBody2D" unique_id=1071265452]
+script = ExtResource("1_veat2")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=879374642]
 position = Vector2(915, 340)
@@ -204,3 +208,11 @@ animation = &"idle"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1499778452]
 position = Vector2(921, 355.5)
 shape = SubResource("RectangleShape2D_n7nmp")
+
+[node name="VanishSound" type="AudioStreamPlayer2D" parent="." unique_id=570031441]
+stream = ExtResource("3_5mfnq")
+volume_db = 5.821
+
+[node name="KillSound" type="AudioStreamPlayer2D" parent="." unique_id=1993858712]
+stream = ExtResource("4_lv6vd")
+volume_db = 5.821
