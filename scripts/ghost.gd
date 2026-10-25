@@ -9,6 +9,7 @@ var direction: float = 1.0
 
 func _ready() -> void:
 	start_x = global_position.x
+	sprite.play("idle")
 
 func _physics_process(_delta: float) -> void:
 	if abs(global_position.x - start_x) >= go_distance:

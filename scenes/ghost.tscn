@@ -7,19 +7,19 @@
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_veat2"]
 atlas = ExtResource("1_t76o2")
-region = Rect2(0, 74, 64, 74)
+region = Rect2(0, 68, 64, 68)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5mfnq"]
 atlas = ExtResource("1_t76o2")
-region = Rect2(64, 74, 64, 74)
+region = Rect2(64, 68, 64, 68)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vbenq"]
 atlas = ExtResource("1_t76o2")
-region = Rect2(128, 74, 64, 74)
+region = Rect2(128, 68, 64, 68)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ttyq4"]
 atlas = ExtResource("1_t76o2")
-region = Rect2(192, 74, 64, 74)
+region = Rect2(192, 68, 64, 68)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_lv6vd"]
 atlas = ExtResource("1_t76o2")
@@ -200,11 +200,11 @@ size = Vector2(80, 115)
 script = ExtResource("1_veat2")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=879374642]
-position = Vector2(915, 340)
+position = Vector2(925.00006, 340)
 scale = Vector2(2.6249998, 2.0675673)
 sprite_frames = SubResource("SpriteFrames_unhky")
 animation = &"idle"
-frame_progress = 0.7638215
+frame_progress = 0.2446309
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1499778452]
 position = Vector2(908, 340)
