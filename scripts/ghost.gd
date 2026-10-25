@@ -44,7 +44,7 @@ func trigger_kill() -> void:
 	var player_sprite = player.get_node_or_null("AnimatedSprite2D")
 	if is_instance_valid(player_sprite):
 		player_sprite.hide()
-		await get_tree().create_timer(0.3).timeout
+		await get_tree().create_timer(1).timeout
 		$VanishSound.play()
 
 	get_tree().current_scene.get_node("UI/DeathScreen").show()

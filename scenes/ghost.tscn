@@ -5,21 +5,21 @@
 [ext_resource type="AudioStream" uid="uid://dtod7sbyfgwjd" path="res://assets/soundeffects/vanish.mp3" id="3_5mfnq"]
 [ext_resource type="AudioStream" uid="uid://ciir7cbe2iuc7" path="res://assets/soundeffects/kill.mp3" id="4_lv6vd"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_l5lq6"]
-atlas = ExtResource("1_t76o2")
-region = Rect2(0, 0, 64, 74)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_bbnym"]
-atlas = ExtResource("1_t76o2")
-region = Rect2(64, 0, 64, 74)
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_veat2"]
 atlas = ExtResource("1_t76o2")
-region = Rect2(128, 0, 64, 74)
+region = Rect2(0, 74, 64, 74)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5mfnq"]
 atlas = ExtResource("1_t76o2")
-region = Rect2(192, 0, 64, 74)
+region = Rect2(64, 74, 64, 74)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vbenq"]
+atlas = ExtResource("1_t76o2")
+region = Rect2(128, 74, 64, 74)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ttyq4"]
+atlas = ExtResource("1_t76o2")
+region = Rect2(192, 74, 64, 74)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_lv6vd"]
 atlas = ExtResource("1_t76o2")
@@ -109,16 +109,16 @@ region = Rect2(512, 384, 64, 64)
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_l5lq6")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_bbnym")
-}, {
-"duration": 1.0,
 "texture": SubResource("AtlasTexture_veat2")
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_5mfnq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vbenq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ttyq4")
 }],
 "loop": 1,
 "name": &"idle",
@@ -194,7 +194,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_n7nmp"]
-size = Vector2(80, 81)
+size = Vector2(80, 115)
 
 [node name="ghost" type="CharacterBody2D" unique_id=1071265452]
 script = ExtResource("1_veat2")
@@ -204,15 +204,16 @@ position = Vector2(915, 340)
 scale = Vector2(2.6249998, 2.0675673)
 sprite_frames = SubResource("SpriteFrames_unhky")
 animation = &"idle"
+frame_progress = 0.7638215
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1499778452]
-position = Vector2(921, 355.5)
+position = Vector2(908, 340)
 shape = SubResource("RectangleShape2D_n7nmp")
 
 [node name="VanishSound" type="AudioStreamPlayer2D" parent="." unique_id=570031441]
 stream = ExtResource("3_5mfnq")
-volume_db = 5.821
+volume_db = 24.0
 
 [node name="KillSound" type="AudioStreamPlayer2D" parent="." unique_id=1993858712]
 stream = ExtResource("4_lv6vd")
-volume_db = 5.821
+volume_db = 24.0
