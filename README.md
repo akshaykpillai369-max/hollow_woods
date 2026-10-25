@@ -6,7 +6,7 @@ This is a 2d horror game which consists of monsters and unpredictable traps
 # Description
 
 This is my first horror game project, I able to learn more about godot things via this project.
-What is the objective: its simple , 'SURVIVE!'
+What is the objective: its simple , 'SURVIVE!' and reach the door with key
 
 # Why I made this
 
