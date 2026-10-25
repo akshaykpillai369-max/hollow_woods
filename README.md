@@ -1,6 +1,7 @@
 # Hollow Woods
 
-This is a 2d horror game which consists of monsters and traps
+This is a 2d horror game which consists of monsters and unpredictable traps
+<img width="1478" height="493" alt="image" src="https://github.com/user-attachments/assets/ef82a282-d3c7-4122-838b-fe87d0dd88dd" />
 
 # Description
 
