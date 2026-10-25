@@ -34,8 +34,6 @@ func _on_wrong_door_trigger_body_entered(body: Node2D) -> void:
 		$UI/WrongDoorLabel.show()
 		await get_tree().create_timer(2).timeout
 		$UI/WrongDoorLabel.hide()
-		
-
 
 func _on_crt_door_show_trigger_body_entered(body: Node2D) -> void:
 	$Door2.show()
