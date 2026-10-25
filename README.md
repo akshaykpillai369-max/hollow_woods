@@ -61,6 +61,10 @@ I used AI to just plan each level
 - Level 2
   <img width="1522" height="507" alt="image" src="https://github.com/user-attachments/assets/5874ddfd-8e19-4648-a889-3add07ee9c5e" />
 
+- Level 3
+  <img width="1406" height="512" alt="image" src="https://github.com/user-attachments/assets/7a02c543-6b13-4244-8fea-1f475e3e1ff2" />
+
+
 
 
 
