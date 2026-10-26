@@ -1,0 +1,289 @@
+[gd_scene format=3 uid="uid://djuf26el3m1mq"]
+
+[ext_resource type="Script" uid="uid://d18hgxf3me05r" path="res://scripts/level11.gd" id="1_yugdm"]
+[ext_resource type="PackedScene" uid="uid://dym8scckddkqb" path="res://scenes/ground.tscn" id="2_0gbw6"]
+[ext_resource type="PackedScene" uid="uid://c50whvid6nv6n" path="res://scenes/rock.tscn" id="3_yugdm"]
+[ext_resource type="PackedScene" uid="uid://c6iifnap50ulp" path="res://scenes/enemy.tscn" id="4_t3r8l"]
+[ext_resource type="AudioStream" uid="uid://bdq4gss2c6udk" path="res://assets/soundeffects/level_music.mp3" id="5_0ko3q"]
+[ext_resource type="PackedScene" uid="uid://gpqdputycit2" path="res://scenes/death_screen.tscn" id="6_be2lv"]
+[ext_resource type="FontFile" uid="uid://dvrkigp4rd1xo" path="res://assets/fonts/PressStart2P-Regular.ttf" id="7_ljmsy"]
+[ext_resource type="PackedScene" uid="uid://d24ggyj8i4k2e" path="res://scenes/winner_screen.tscn" id="8_dhqqo"]
+[ext_resource type="PackedScene" uid="uid://52uharlxyeji" path="res://scenes/hovering_ground.tscn" id="9_q8ppp"]
+[ext_resource type="PackedScene" uid="uid://8j7hsrf16f0" path="res://scenes/player.tscn" id="10_uneub"]
+[ext_resource type="PackedScene" uid="uid://0cpwxmjojfpc" path="res://scenes/key.tscn" id="11_i8eqs"]
+[ext_resource type="PackedScene" uid="uid://de2psflxmuajc" path="res://scenes/door.tscn" id="12_qmgri"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n7nmp"]
+size = Vector2(108, 1415)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_unhky"]
+size = Vector2(50.625, 218)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8h2m0"]
+size = Vector2(185, 53.75)
+
+[node name="level11" type="Node2D" unique_id=2089548068]
+script = ExtResource("1_yugdm")
+
+[node name="Ground" parent="." unique_id=1932350716 instance=ExtResource("2_0gbw6")]
+position = Vector2(1, 13)
+
+[node name="Ground2" parent="." unique_id=117637961 instance=ExtResource("2_0gbw6")]
+position = Vector2(1153, 13)
+
+[node name="Ground3" parent="." unique_id=5861961 instance=ExtResource("2_0gbw6")]
+position = Vector2(2304, 10)
+
+[node name="Ground4" parent="." unique_id=818509051 instance=ExtResource("2_0gbw6")]
+position = Vector2(-1151, 13)
+
+[node name="Ground6" parent="." unique_id=258447502 instance=ExtResource("2_0gbw6")]
+position = Vector2(1, -1601)
+rotation = -3.1363566
+
+[node name="Ground11" parent="Ground6" unique_id=1985439086 instance=ExtResource("2_0gbw6")]
+position = Vector2(282.9898, -1592.9999)
+rotation = 3.1468287
+
+[node name="Ground6" parent="Ground6/Ground11" unique_id=1959229879 instance=ExtResource("2_0gbw6")]
+position = Vector2(282.0486, 8.523315)
+
+[node name="Ground10" parent="Ground6/Ground11" unique_id=1866034889 instance=ExtResource("2_0gbw6")]
+position = Vector2(-893.9042, 20.680908)
+
+[node name="Ground9" parent="Ground6/Ground11" unique_id=623609955 instance=ExtResource("2_0gbw6")]
+position = Vector2(-2038.9727, 10.676025)
+
+[node name="Ground8" parent="Ground6/Ground11" unique_id=859742172 instance=ExtResource("2_0gbw6")]
+position = Vector2(-3180.9463, 18.655762)
+
+[node name="Ground7" parent="Ground6/Ground11" unique_id=181185198 instance=ExtResource("2_0gbw6")]
+position = Vector2(-4327.904, 29.66101)
+
+[node name="Ground11" parent="." unique_id=1249924978 instance=ExtResource("2_0gbw6")]
+position = Vector2(283.00012, -1591)
+rotation = 3.1468287
+
+[node name="Ground10" parent="Ground11" unique_id=1187669635 instance=ExtResource("2_0gbw6")]
+position = Vector2(-893.9042, 20.680908)
+
+[node name="Ground9" parent="Ground11" unique_id=647798650 instance=ExtResource("2_0gbw6")]
+position = Vector2(-2038.9727, 10.676025)
+
+[node name="Ground8" parent="Ground11" unique_id=976628736 instance=ExtResource("2_0gbw6")]
+position = Vector2(-3180.9463, 18.655762)
+
+[node name="Ground7" parent="Ground11" unique_id=1057091665 instance=ExtResource("2_0gbw6")]
+position = Vector2(-4327.904, 29.66101)
+
+[node name="Ground5" parent="." unique_id=723496604 instance=ExtResource("2_0gbw6")]
+position = Vector2(3457, 13)
+
+[node name="Area2D" parent="." unique_id=563170387 instance=ExtResource("3_yugdm")]
+position = Vector2(-189, 313)
+
+[node name="Area2D2" parent="." unique_id=1498764463 instance=ExtResource("3_yugdm")]
+position = Vector2(667, 313)
+
+[node name="Area2D3" parent="." unique_id=410454900 instance=ExtResource("3_yugdm")]
+position = Vector2(1293, 315)
+
+[node name="Area2D4" parent="." unique_id=181247783 instance=ExtResource("3_yugdm")]
+position = Vector2(1985, 317)
+
+[node name="Area2D5" parent="." unique_id=1614736799 instance=ExtResource("3_yugdm")]
+position = Vector2(2992, 315)
+
+[node name="Enemy" parent="." unique_id=179718117 instance=ExtResource("4_t3r8l")]
+position = Vector2(-675, 297)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=586361335]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=301477303]
+position = Vector2(-51, -39.5)
+shape = SubResource("RectangleShape2D_n7nmp")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="." unique_id=680895151]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2" unique_id=475384587]
+position = Vector2(3520, 309)
+shape = SubResource("RectangleShape2D_n7nmp")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="." unique_id=1859708027]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3" unique_id=834390322]
+position = Vector2(3517, -384)
+shape = SubResource("RectangleShape2D_n7nmp")
+
+[node name="LevelMusic" type="AudioStreamPlayer" parent="." unique_id=537326415]
+stream = ExtResource("5_0ko3q")
+volume_db = -13.5
+
+[node name="MonsterTrigger" type="Area2D" parent="." unique_id=1895320217]
+position = Vector2(-117, -306)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MonsterTrigger" unique_id=198374186]
+position = Vector2(333, 36)
+shape = SubResource("RectangleShape2D_unhky")
+
+[node name="UI" type="CanvasLayer" parent="." unique_id=955424061]
+
+[node name="DeathScreen" parent="UI" unique_id=621254565 instance=ExtResource("6_be2lv")]
+offset_left = 445.0
+offset_top = -3.0
+offset_right = 485.0
+offset_bottom = 37.0
+
+[node name="DoorLockedLabel" type="Label" parent="UI" unique_id=675427836]
+visible = false
+offset_left = 623.0
+offset_top = 45.0
+offset_right = 1003.0
+offset_bottom = 135.0
+theme_override_constants/line_spacing = 15
+theme_override_fonts/font = ExtResource("7_ljmsy")
+theme_override_font_sizes/font_size = 20
+text = "DOOR IS LOCKED!
+YOU HAVE TO FIND A 
+       KEY"
+
+[node name="WrongDoorLabel" type="Label" parent="UI" unique_id=122069184]
+visible = false
+offset_left = 1025.0
+offset_top = 194.0
+offset_right = 1405.0
+offset_bottom = 284.0
+theme_override_constants/line_spacing = 15
+theme_override_fonts/font = ExtResource("7_ljmsy")
+theme_override_font_sizes/font_size = 20
+text = "THIS IS A WRONG
+DOOR, FIND THE
+REAL DOOR "
+
+[node name="WinnerScreen" parent="UI" unique_id=162556210 instance=ExtResource("8_dhqqo")]
+offset_left = 465.0
+offset_right = 505.0
+
+[node name="Player" parent="." unique_id=1567295188 instance=ExtResource("10_uneub")]
+position = Vector2(-343, 62)
+player_current_speed = 215.0
+
+[node name="AnimatedSprite2D" parent="Player" index="0" unique_id=1993292878]
+position = Vector2(480.00006, -310)
+
+[node name="CollisionShape2D" parent="Player" index="1" unique_id=1789058853]
+position = Vector2(481, -294)
+
+[node name="Camera2D" parent="Player" index="2" unique_id=180238180]
+position = Vector2(952, -121)
+
+[node name="Key" parent="." unique_id=1300114925 instance=ExtResource("11_i8eqs")]
+position = Vector2(2364, -31)
+
+[node name="Door2" parent="." unique_id=742334818 instance=ExtResource("12_qmgri")]
+position = Vector2(-800, -917)
+scale = Vector2(2, 2)
+
+[node name="HoveringGround" parent="." unique_id=1274929257 instance=ExtResource("9_q8ppp")]
+position = Vector2(183, -101)
+
+[node name="Sprite2D" parent="HoveringGround" index="0" unique_id=373699474]
+position = Vector2(0, 35)
+
+[node name="CollisionShape2D" parent="HoveringGround" index="1" unique_id=531210992]
+position = Vector2(1, -41)
+
+[node name="HoveringGround2" parent="." unique_id=1544898517 instance=ExtResource("9_q8ppp")]
+position = Vector2(606, -101)
+
+[node name="Sprite2D" parent="HoveringGround2" index="0" unique_id=373699474]
+position = Vector2(0, 35)
+
+[node name="CollisionShape2D" parent="HoveringGround2" index="1" unique_id=531210992]
+position = Vector2(1, -41)
+
+[node name="GroundRotate" type="Area2D" parent="HoveringGround2" unique_id=1524703210]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HoveringGround2/GroundRotate" unique_id=1441942166]
+position = Vector2(-2, -84.5)
+shape = SubResource("RectangleShape2D_8h2m0")
+
+[node name="HoveringGround3" parent="." unique_id=2130995455 instance=ExtResource("9_q8ppp")]
+position = Vector2(611, 193)
+
+[node name="Sprite2D" parent="HoveringGround3" index="0" unique_id=373699474]
+position = Vector2(0, 35)
+
+[node name="CollisionShape2D" parent="HoveringGround3" index="1" unique_id=531210992]
+position = Vector2(1, -41)
+
+[node name="HoveringGround5" parent="." unique_id=13456983 instance=ExtResource("9_q8ppp")]
+position = Vector2(1012, 193)
+
+[node name="Sprite2D" parent="HoveringGround5" index="0" unique_id=373699474]
+position = Vector2(0, 35)
+
+[node name="CollisionShape2D" parent="HoveringGround5" index="1" unique_id=531210992]
+position = Vector2(1, -41)
+
+[node name="GroundRotate2" type="Area2D" parent="HoveringGround5" unique_id=1755304779]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HoveringGround5/GroundRotate2" unique_id=1779754100]
+position = Vector2(-2, -84.5)
+shape = SubResource("RectangleShape2D_8h2m0")
+
+[node name="HoveringGround7" parent="." unique_id=1764219252 instance=ExtResource("9_q8ppp")]
+position = Vector2(1287, 193)
+
+[node name="Sprite2D" parent="HoveringGround7" index="0" unique_id=373699474]
+position = Vector2(1606, 183)
+
+[node name="CollisionShape2D" parent="HoveringGround7" index="1" unique_id=531210992]
+position = Vector2(1609, 105)
+
+[node name="GroundMove2" type="Area2D" parent="HoveringGround7" unique_id=489044977]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HoveringGround7/GroundMove2" unique_id=509525475]
+position = Vector2(1551, 79.875)
+shape = SubResource("RectangleShape2D_8h2m0")
+
+[node name="HoveringGround6" parent="." unique_id=992697268 instance=ExtResource("9_q8ppp")]
+position = Vector2(1058, -102)
+
+[node name="Sprite2D" parent="HoveringGround6" index="0" unique_id=373699474]
+position = Vector2(0, 35)
+
+[node name="CollisionShape2D" parent="HoveringGround6" index="1" unique_id=531210992]
+position = Vector2(1, -41)
+
+[node name="HoveringGround4" parent="." unique_id=1344673486 instance=ExtResource("9_q8ppp")]
+position = Vector2(192, 191)
+
+[node name="Sprite2D" parent="HoveringGround4" index="0" unique_id=373699474]
+position = Vector2(0, 35)
+
+[node name="CollisionShape2D" parent="HoveringGround4" index="1" unique_id=531210992]
+position = Vector2(1, -41)
+
+[node name="GroundMove" type="Area2D" parent="HoveringGround4" unique_id=554253054]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HoveringGround4/GroundMove" unique_id=1650893358]
+position = Vector2(-2, -84.5)
+shape = SubResource("RectangleShape2D_8h2m0")
+
+[connection signal="body_entered" from="MonsterTrigger" to="." method="_on_monster_trigger_body_entered"]
+[connection signal="pressed" from="UI/WinnerScreen/NextButton" to="." method="_on_next_button_pressed"]
+[connection signal="body_entered" from="HoveringGround2/GroundRotate" to="." method="_on_ground_rotate_body_entered"]
+[connection signal="body_entered" from="HoveringGround5/GroundRotate2" to="." method="_on_ground_rotate_2_body_entered"]
+[connection signal="body_entered" from="HoveringGround7/GroundMove2" to="." method="_on_ground_move_2_body_entered"]
+[connection signal="body_entered" from="HoveringGround4/GroundMove" to="." method="_on_ground_move_body_entered"]
+
+[editable path="UI/WinnerScreen"]
+[editable path="Player"]
+[editable path="HoveringGround"]
+[editable path="HoveringGround2"]
+[editable path="HoveringGround3"]
+[editable path="HoveringGround5"]
+[editable path="HoveringGround7"]
+[editable path="HoveringGround6"]
+[editable path="HoveringGround4"]
