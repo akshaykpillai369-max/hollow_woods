@@ -6,6 +6,7 @@
 size = Vector2(204, 41)
 
 [node name="HoveringGround" type="AnimatableBody2D" unique_id=1764219252]
+position = Vector2(18, 16)
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=373699474]
 position = Vector2(596.6507, 319.40866)
