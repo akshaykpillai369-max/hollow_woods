@@ -34,50 +34,39 @@ func _process(delta: float) -> void:
 	
 	
 func _on_next_button_pressed() -> void:
-	get_tree().change_scene_to_file("res://scenes/level9.tscn")
+	get_tree().change_scene_to_file("res://scenes/level11.tscn")
 
-#func _on_platform_vanish_trigger_body_entered(body: Node2D) -> void:
-	#if body == $Player:
-		#$PlatformVanishTrigger.queue_free()
-		#await get_tree().create_timer(1).timeout
-		#$HoveringGround12.queue_free()
-		#await get_tree().create_timer(1.1).timeout
-		#$HoveringGround.queue_free()
+
+#func _on_platform_vanish_trigger_2_body_entered(body: Node2D) -> void:
+	#if body.name == "Player":
+		#$HoveringGround3.queue_free()
+		#$PlatformVanishTrigger2.queue_free()
+		#await get_tree().create_timer(1.2).timeout
+		#
+		#var tween = create_tween()
+		#
+		#tween.tween_property(
+			#$HoveringGround11,
+			#"position:x",
+			#$HoveringGround11.position.x + 370,
+			#1
+		#)
+		#tween.tween_property(
+			#$HoveringGround11,
+			#"position:y",
+			#$HoveringGround11.position.y - 170,
+			#1
+		#)
+		#await get_tree().create_timer(5).timeout
+		#$HoveringGround11.queue_free()
 		#await get_tree().create_timer(1.5).timeout
-		#$HoveringGround8.queue_free()
-	
-
-
-func _on_platform_vanish_trigger_2_body_entered(body: Node2D) -> void:
-	if body.name == "Player":
-		$HoveringGround3.queue_free()
-		$PlatformVanishTrigger2.queue_free()
-		await get_tree().create_timer(1.2).timeout
-		
-		var tween = create_tween()
-		
-		tween.tween_property(
-			$HoveringGround11,
-			"position:x",
-			$HoveringGround11.position.x + 370,
-			1
-		)
-		tween.tween_property(
-			$HoveringGround11,
-			"position:y",
-			$HoveringGround11.position.y - 170,
-			1
-		)
-		await get_tree().create_timer(5).timeout
-		$HoveringGround11.queue_free()
-		await get_tree().create_timer(1.5).timeout
-		$HoveringGround6.queue_free()
-		await get_tree().create_timer(1.5).timeout
-		$HoveringGround10.queue_free()
-		await get_tree().create_timer(1.8).timeout
-		$HoveringGround5.queue_free()
-		await get_tree().create_timer(2).timeout
-		$HoveringGround7.queue_free()
+		#$HoveringGround6.queue_free()
+		#await get_tree().create_timer(1.5).timeout
+		#$HoveringGround10.queue_free()
+		#await get_tree().create_timer(1.8).timeout
+		#$HoveringGround5.queue_free()
+		#await get_tree().create_timer(2).timeout
+		#$HoveringGround7.queue_free()
 		
 		
 
