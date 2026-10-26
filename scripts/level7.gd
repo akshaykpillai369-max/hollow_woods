@@ -7,7 +7,7 @@ func _ready() -> void:
 	GameManager.has_key = false
 	GameManager.current_level = 7
 	$CatEnemy.hide()
-	$HoveringGround11.hide()
+	$HoveringGround11.hide() 
 	var horizontal_tween = create_tween().set_loops()
 	horizontal_tween.tween_property(
 		$HoveringGround8,

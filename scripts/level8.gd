@@ -19,7 +19,7 @@ func _process(delta: float) -> void:
 	
 	
 func _on_next_button_pressed() -> void:
-	get_tree().change_scene_to_file("res://scenes/coming_soon.tscn")
+	get_tree().change_scene_to_file("res://scenes/level9.tscn")
 
 func _on_platform_vanish_trigger_body_entered(body: Node2D) -> void:
 	if body == $Player:

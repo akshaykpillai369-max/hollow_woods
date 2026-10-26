@@ -51,7 +51,7 @@ func _physics_process(delta: float) -> void:
 		
 func die():
 	walk_sound.stop()
-	$Player.set_physics_process(false)
+	set_physics_process(false)
 	velocity = Vector2.ZERO
 	$DeathSound.play()
 	get_tree().current_scene.get_node("UI/DeathScreen").show()
