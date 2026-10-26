@@ -208,7 +208,7 @@ position = Vector2(600, 218.75)
 shape = SubResource("RectangleShape2D_hms2d")
 
 [node name="HoveringGround3" parent="." unique_id=1644537794 instance=ExtResource("10_r4i0l")]
-position = Vector2(1419, -489)
+position = Vector2(1412, -245)
 
 [node name="Key" parent="." unique_id=1300114925 instance=ExtResource("11_vpfkg")]
 position = Vector2(1920, -713)
@@ -218,7 +218,7 @@ position = Vector2(1537, -1029)
 scale = Vector2(2, 2)
 
 [node name="ghost" parent="." unique_id=1071265452 instance=ExtResource("13_q1tln")]
-position = Vector2(640, -868)
+position = Vector2(640, -1219)
 scale = Vector2(1.5, 1.5)
 
 [node name="ghost2" parent="." unique_id=1590076435 instance=ExtResource("13_q1tln")]

@@ -25,13 +25,13 @@ func _ready() -> void:
 	vertical_tween.tween_property(
 		$HoveringGround3,
 		"position:y",
-		$HoveringGround8.position.y - 600,
+		$HoveringGround3.position.y - 300,
 		3
 	)
 	vertical_tween.tween_property(
 		$HoveringGround3,
 		"position:y",
-		$HoveringGround8.position.y,
+		$HoveringGround3.position.y,
 		3
 	)
 

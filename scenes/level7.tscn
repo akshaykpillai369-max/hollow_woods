@@ -197,7 +197,7 @@ position = Vector2(949, -180)
 position = Vector2(299, 97)
 
 [node name="HoveringGround3" parent="." unique_id=1644537794 instance=ExtResource("10_rng2m")]
-position = Vector2(1419, -489)
+position = Vector2(1415, -246)
 
 [node name="Key" parent="." unique_id=1300114925 instance=ExtResource("11_8600d")]
 position = Vector2(1920, -713)
@@ -207,7 +207,7 @@ position = Vector2(1521, -100)
 scale = Vector2(2, 2)
 
 [node name="ghost" parent="." unique_id=1071265452 instance=ExtResource("13_ogwt3")]
-position = Vector2(640, -868)
+position = Vector2(632, -1248)
 scale = Vector2(1.5, 1.5)
 
 [node name="ghost2" parent="." unique_id=1590076435 instance=ExtResource("13_ogwt3")]
